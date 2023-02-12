@@ -1,12 +1,14 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import ExperienceCard from "../components/experience_card";
 
 const Home: NextPage = () => {
     return (
         <>
             <main className="flex min-h-screen flex-col items-center justify-center bg-stone-400
             font-sans font-normal leading-relaxed text-black font-base">
+                <ExperienceCard title={"test"} company={"test"} description={"test"} link={"example.com"}/>
                 {/*<div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">*/}
                 {/*    <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">*/}
                 {/*        Create <span className="text-[hsl(280,100%,70%)]">T3</span> App*/}
