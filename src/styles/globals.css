@@ -1,0 +1,34 @@
+@tailwind base;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    @apply text-green-500;
+  }
+}
+
+
+/*@layer utilities {*/
+/*  .pb-safe {*/
+/*    padding-bottom: env(safe-area-inset-bottom);*/
+/*  }*/
+/*}*/
+
+/*@layer base {*/
+/*  h1,*/
+/*  h2,*/
+/*  h3,*/
+/*  h4,*/
+/*  h5,*/
+/*  h6 {*/
+/*    @apply font-heading;*/
+/*  }*/
+
+/*  p {*/
+/*    @apply font-body;*/
+/*  }*/
+/*}*/
+
+
+@tailwind components;
+@tailwind utilities;
