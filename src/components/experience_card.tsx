@@ -1,3 +1,4 @@
+import Arrow from "./arrow";
 
 type ExperienceCardProps = {
     title: string
@@ -17,6 +18,10 @@ const ExperienceCard = ({title, company, description, link}: ExperienceCardProps
                 <h3 className="text-xl font-regular" href={link}>{company} </h3>
             </div>
             <p className="text-lg">{description}</p>
+
+            <div className="flex flex-row items-center justify-center">
+                <Arrow/>
+            </div>
         </div>
     )
 }
