@@ -1,15 +1,56 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import ExperienceCard from "../components/experience_card";
 import Logo from "../components/logo";
+import Link from "next/link";
+import Arrow from "../components/arrow";
 
 const FirstPost = () => {
+
+    const [isVisible, setIsVisible] = useState(false)
+
+    const toggleVisibility = () => {
+        if (window.scrollY > 200) {
+            setIsVisible(true)
+        } else {
+            setIsVisible(false)
+        }
+    }
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        })
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', toggleVisibility)
+
+        return () => {
+            window.removeEventListener('scroll', toggleVisibility)
+        }
+    }, [])
+
     return (
-        <div className="min-h-screen  min-w-screen bg-stone-300">
-            <div className="w-36 p-4 absolute right-0">
-                <Logo/>
+        <div className="bg-stone-300">
+            <div className="w-36 p-6 fixed right-4 top-0">
+                <Link href="/">
+                    <Logo/>
+                </Link>
             </div>
-            <div className="flex flex-col items-center
-            font-sans font-normal leading-relaxed text-stone-800 font-base">
+            {isVisible ? <button className="fixed right-10 bottom-10" onClick={()=>scrollToTop()}>
+                <Arrow/>
+            </button> : null}
+
+
+            <div className="flex flex-col items-center p-4
+            text-stone-800 overflow-auto scrollbar">
+                <ExperienceCard title={"test"} company={"test"} description={"test"} link={"example.com"}/>
+                <ExperienceCard title={"test"} company={"test"} description={"test"} link={"example.com"}/>
+                <ExperienceCard title={"test"} company={"test"} description={"test"} link={"example.com"}/>
+                <ExperienceCard title={"test"} company={"test"} description={"test"} link={"example.com"}/>
+                <ExperienceCard title={"test"} company={"test"} description={"test"} link={"example.com"}/>
+                <ExperienceCard title={"test"} company={"test"} description={"test"} link={"example.com"}/>
                 <ExperienceCard title={"test"} company={"test"} description={"test"} link={"example.com"}/>
                 <ExperienceCard title={"test"} company={"test"} description={"test"} link={"example.com"}/>
                 <ExperienceCard title={"test"} company={"test"} description={"test"} link={"example.com"}/>

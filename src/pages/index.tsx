@@ -7,8 +7,7 @@ const Home: NextPage = () => {
     return (
         <>
             <main className="flex min-h-screen flex-col items-center justify-center bg-stone-400
-            font-sans font-normal leading-relaxed text-stone-400 font-base">
-
+            font-sans font-normal leading-relaxed text-stone-800 font-base">
                 <div className="flex flex-col items-center justify-center gap-12 px-4 py-16 "> hello
                     <Link href="/experience">this page!</Link>
                 </div>
