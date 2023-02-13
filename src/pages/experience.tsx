@@ -1,14 +1,16 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import ExperienceCard from "../components/experience_card";
-import Logo from "../components/logo";
+import Logo from "../assets/logo";
 import Link from "next/link";
-import Arrow from "../components/arrow";
+import Arrow from "../assets/arrow";
 
-const FirstPost = () => {
+const Experience = () => {
 
     const [isVisible, setIsVisible] = useState(false)
+    // const myRef = useRef(null)
 
     const toggleVisibility = () => {
+        // if (myRef.current && myRef.current > 200) {
         if (window.scrollY > 200) {
             setIsVisible(true)
         } else {
@@ -60,4 +62,4 @@ const FirstPost = () => {
     )
 }
 
-export default FirstPost;
+export default Experience;

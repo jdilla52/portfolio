@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         heading: ['Montserrat', 'sans-serif'],
         body: ['Hind', 'sans-serif'],
+      },
+      strokeWidth: {
+        '3': '3px',
       }
     },
   },

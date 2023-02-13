@@ -1,4 +1,4 @@
-import Arrow from "./arrow";
+import Arrow from "../assets/arrow";
 import {useState} from "react";
 
 type ExperienceCardProps = {
@@ -24,7 +24,7 @@ const ExperienceCard = ({title, company, description, link}: ExperienceCardProps
             </div>
             <p className="text-lg">{description}</p>
             {toggle && <p className="text-lg">test</p>}
-            <div className="flex flex-row items-center justify-center">
+            <div className="flex flex-row items-center justify-center h-4">
                 <Arrow/>
             </div>
         </div>
