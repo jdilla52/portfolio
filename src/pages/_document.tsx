@@ -14,7 +14,6 @@ const MyDocument = () => {
                     href='https://fonts.googleapis.com/css2?family=Abel&family=Architects+Daughter&family=Autour+One&display=swap'
                     rel='stylesheet'
                 />
-
                 <link
                     rel='apple-touch-icon'
                     sizes='180x180'

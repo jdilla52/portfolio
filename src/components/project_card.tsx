@@ -24,7 +24,7 @@ const ProjectCard = ({title, description, link}: ProjectCardProps) => {
                     <a className="h-7" href={link}>
                         <Github/>
                     </a>
-                    <div className="h-5">
+                    <div className="h-3">
                         <Arrow t={toggle ? 1.0 : 0.0}/>
                     </div>
                 </div>

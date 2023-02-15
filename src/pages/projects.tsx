@@ -46,12 +46,10 @@ const Projects = () => {
             </div>
             <div className="w-36">
                 <div className="flex flex-col h-screen p-6 fixed place-content-between items-center">
-                        <div className="">
                             <Link href="/">
                                 <Logo/>
                             </Link>
-                        </div>
-                    <button className="h-8" onClick={() => scrollToTop()}>
+                    <button className="h-5 w-full overflow-visible" onClick={() => scrollToTop()}>
                         <Arrow t={scroll}/>
                     </button>
                 </div>
