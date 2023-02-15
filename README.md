@@ -26,3 +26,11 @@ You can check out the [create-t3-app GitHub repository](https://github.com/t3-os
 ## How do I deploy this?
 
 Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+
+
+todo:
+- [ ] add background shader:
+    - [ ] use this rgb https://redpixelthemes.com/blog/tailwindcss-colors-different-formats/#color-Stone
+    - [ ] decide on perlin or gaussian, maybe let folks choose. could do flocking, gol or reaction diffusion as well.
+- [ ] add project assets 
+- [ ] add experience assets

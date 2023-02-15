@@ -27,7 +27,7 @@ const ExperienceCard = ({title, company, description, link}: ExperienceCardProps
                     <p className="text-lg">{description}</p>
                     {toggle && <p className="text-lg">test</p>}
                 </div>
-                <div className="self-end h-4">
+                <div className="self-end h-2.5">
                     <Arrow t={toggle ? 1.0 : 0.0}/>
                 </div>
             </div>

@@ -53,7 +53,7 @@ const Experience = () => {
                             <Logo/>
                         </Link>
                     </div>
-                    <button className="h-8" onClick={() => scrollToTop()}>
+                    <button className="h-5 w-full" onClick={() => scrollToTop()}>
                         <Arrow t={scroll}/>
                     </button>
                 </div>
