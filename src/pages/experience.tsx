@@ -1,36 +1,15 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useRef} from "react";
 import ExperienceCard from "../components/experience_card";
 import Logo from "../assets/logo";
 import Link from "next/link";
-import Arrow from "../assets/arrow";
+import ScrollableArrow from "../assets/scrollable_arrow";
 
 const Experience = () => {
 
-    const [scroll, setScroll] = useState(0.5)
     const outerRef = useRef<HTMLInputElement>(null)
-
-    const toggleVisibility = () => {
-        if (outerRef.current !== null) {
-            // interpolate between 0.5 and 1
-            setScroll(0.5 + 0.5 * (window.scrollY / (outerRef.current.scrollHeight - window.innerHeight)))
-        }
+    const getRef = () => {
+        return outerRef.current
     }
-
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        })
-    }
-
-    useEffect(() => {
-        window.addEventListener('scroll', toggleVisibility)
-
-        return () => {
-            window.removeEventListener('scroll', toggleVisibility)
-        }
-    }, [])
-
     return (
         <div className="flex flex-row bg-stone-300 min-h-screen" ref={outerRef}>
             <div className="grow w-fit flex flex-col items-center p-4
@@ -53,9 +32,7 @@ const Experience = () => {
                             <Logo/>
                         </Link>
                     </div>
-                    <button className="h-5 w-full" onClick={() => scrollToTop()}>
-                        <Arrow t={scroll}/>
-                    </button>
+                    <ScrollableArrow outerRef={getRef}/>
                 </div>
             </div>
         </div>
