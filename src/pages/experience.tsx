@@ -30,17 +30,8 @@ const Experience = () => {
     }, [])
 
     return (
-        <div className="bg-stone-300" ref={outerRef}>
-            <div className="w-36 p-6 fixed right-4 top-0">
-                <Link href="/">
-                    <Logo/>
-                </Link>
-            </div>
-           <button className="fixed right-10 bottom-10" onClick={()=>scrollToTop()}>
-                <Arrow t={scroll}/>
-            </button>
-
-            <div className="flex flex-col items-center p-4
+        <div className="flex flex-row bg-stone-300 min-h-screen" ref={outerRef}>
+            <div className="grow w-fit flex flex-col items-center p-4
             text-stone-800 overflow-auto scrollbar">
                 <ExperienceCard title={"test"} company={"test"} description={"test"} link={"example.com"}/>
                 <ExperienceCard title={"test"} company={"test"} description={"test"} link={"example.com"}/>
@@ -52,6 +43,18 @@ const Experience = () => {
                 <ExperienceCard title={"test"} company={"test"} description={"test"} link={"example.com"}/>
                 <ExperienceCard title={"test"} company={"test"} description={"test"} link={"example.com"}/>
                 <ExperienceCard title={"test"} company={"test"} description={"test"} link={"example.com"}/>
+            </div>
+            <div className="w-36">
+                <div className="flex flex-col h-screen p-6 fixed place-content-between items-center">
+                    <div className="">
+                        <Link href="/">
+                            <Logo/>
+                        </Link>
+                    </div>
+                    <button className="h-8" onClick={() => scrollToTop()}>
+                        <Arrow t={scroll}/>
+                    </button>
+                </div>
             </div>
         </div>
     )

@@ -29,7 +29,7 @@ const Home: NextPage = () => {
                             <Link href="/experience">experience</Link>
                         </li>
                         <li>
-                            <Link href="/experience">experiments</Link>
+                            <Link href="/projects">side projects</Link>
                         </li>
                     </ol>
                 </div>
