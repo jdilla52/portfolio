@@ -1,5 +1,4 @@
 import React, {useEffect, useRef, useState} from "react";
-import ExperienceCard from "../components/experience_card";
 import Logo from "../assets/logo";
 import Link from "next/link";
 import Arrow from "../assets/arrow";
@@ -8,11 +7,13 @@ import ProjectCard from "../components/project_card";
 const Projects = () => {
 
     const [scroll, setScroll] = useState(0.5)
-    const outerRef = useRef(null)
+    const outerRef = useRef<HTMLInputElement>(null)
 
     const toggleVisibility = () => {
-        // interpolate between 0.5 and 1
-        setScroll(0.5 + 0.5 * (window.scrollY / (outerRef.current.scrollHeight - window.innerHeight)))
+        if (outerRef.current !== null) {
+            // interpolate between 0.5 and 1
+            setScroll(0.5 + 0.5 * (window.scrollY / (outerRef.current.scrollHeight - window.innerHeight)))
+        }
     }
 
     const scrollToTop = () => {

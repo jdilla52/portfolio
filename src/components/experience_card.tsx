@@ -22,7 +22,7 @@ const ExperienceCard = ({title, company, description, link}: ExperienceCardProps
                 <div className="flex flex-col items-left justify-center">
                     <div className="flex flex-row items-left justify-left gap-4 text-lg">
                         <h3 className="">{title}:</h3>
-                        <h3 className="" href={link}>{company} </h3>
+                        <a className="" href={link}>{company} </a>
                     </div>
                     <p className="text-lg">{description}</p>
                     {toggle && <p className="text-lg">test</p>}

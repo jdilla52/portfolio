@@ -1,17 +1,29 @@
 
 
 const InterpolateToSvg =(l: Array<Array<number>>, r: Array<Array<number>>, v = 0): string => {
-    if (l.length !== r.length || l.length < 1 || l[0].length !== 2 || r[0].length !== 2) {
+    if (l.length !== r.length || l.length < 1 || l[0]?.length !== 2 || r[0]?.length !== 2) {
         throw new Error("Lengths of arrays are not equal or invalid")
     }
+
     let result = "";
     for (let i = 0; i < l.length; i++) {
         const vv = 1-v;
-        // @ts-ignore
-        result += (l[i][0] * vv + r[i][0] * v).toFixed() + "," + (l[i][1] * vv + r[i][1] * v).toFixed();
-        if (i < l.length - 1) {
-            result += " ";
+        const ll: Array<number> | undefined = l[i];
+        const rr: Array<number> | undefined = r[i];
+
+        if (ll === undefined || rr === undefined) {
+            throw new Error("Invalid array")
         }
+
+        const [l1, l2] = ll;
+        const [r1, r2] = rr;
+        if (l1 && l2 && r1 && r2) {
+            result += (l1 * vv + r1 * v).toFixed() + "," + (l2 * vv + r2 * v).toFixed();
+            if (i < l.length - 1) {
+                result += " ";
+            }
+        }
+
     }
     return result
 }

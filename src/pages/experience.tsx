@@ -7,11 +7,13 @@ import Arrow from "../assets/arrow";
 const Experience = () => {
 
     const [scroll, setScroll] = useState(0.5)
-    const outerRef = useRef(null)
+    const outerRef = useRef<HTMLInputElement>(null)
 
     const toggleVisibility = () => {
-        // interpolate between 0.5 and 1
-        setScroll(0.5 + 0.5 * (window.scrollY / (outerRef.current.scrollHeight - window.innerHeight)))
+        if (outerRef.current !== null) {
+            // interpolate between 0.5 and 1
+            setScroll(0.5 + 0.5 * (window.scrollY / (outerRef.current.scrollHeight - window.innerHeight)))
+        }
     }
 
     const scrollToTop = () => {
