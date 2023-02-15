@@ -6,16 +6,12 @@ import Arrow from "../assets/arrow";
 
 const Experience = () => {
 
-    const [isVisible, setIsVisible] = useState(false)
-    // const myRef = useRef(null)
+    const [scroll, setScroll] = useState(0.5)
+    const outerRef = useRef(null)
 
     const toggleVisibility = () => {
-        // if (myRef.current && myRef.current > 200) {
-        if (window.scrollY > 200) {
-            setIsVisible(true)
-        } else {
-            setIsVisible(false)
-        }
+        // interpolate between 0.5 and 1
+        setScroll(0.5 + 0.5 * (window.scrollY / (outerRef.current.scrollHeight - window.innerHeight)))
     }
 
     const scrollToTop = () => {
@@ -34,16 +30,15 @@ const Experience = () => {
     }, [])
 
     return (
-        <div className="bg-stone-300">
+        <div className="bg-stone-300" ref={outerRef}>
             <div className="w-36 p-6 fixed right-4 top-0">
                 <Link href="/">
                     <Logo/>
                 </Link>
             </div>
-            {isVisible ? <button className="fixed right-10 bottom-10" onClick={()=>scrollToTop()}>
-                <Arrow/>
-            </button> : null}
-
+           <button className="fixed right-10 bottom-10" onClick={()=>scrollToTop()}>
+                <Arrow t={scroll}/>
+            </button>
 
             <div className="flex flex-col items-center p-4
             text-stone-800 overflow-auto scrollbar">
