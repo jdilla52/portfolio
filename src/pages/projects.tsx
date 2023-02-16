@@ -61,6 +61,7 @@ const Projects = () => {
                     </Link>
                     <ScrollableArrow outerRef={getRef}/>
                 </div>
+                <ScrollableArrow outerRef={getRef}/>
             </div>
         </div>
     )

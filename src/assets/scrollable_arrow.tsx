@@ -3,13 +3,13 @@ import React, {useEffect, useState} from "react";
 
 
 type ScrollableArrowProps = {
-    outerRef: () => HTMLInputElement | null
+    outerRef: () => HTMLDivElement | null
 }
 const ScrollableArrow = (props: ScrollableArrowProps) => {
     const [scroll, setScroll] = useState(0.5)
 
     const scrollToTop = () => {
-        window.scrollTo({
+        props.outerRef()?.scrollTo({
             top: 0,
             behavior: 'smooth',
         })
@@ -18,16 +18,22 @@ const ScrollableArrow = (props: ScrollableArrowProps) => {
     useEffect(() => {
         const toggleVisibility = () => {
             const ref = props.outerRef()
+
             if (ref) {
                 // interpolate between 0.5 and 1
-                setScroll(0.5 + 0.5 * (window.scrollY / (ref.scrollHeight - window.innerHeight)))
+                setScroll(0.5 + 0.5 * (ref.scrollTop / (ref.scrollHeight - window.innerHeight)))
             }
         }
 
-        window.addEventListener('scroll', toggleVisibility)
+        const ref = props.outerRef();
+        if (ref) {
+            ref.addEventListener('scroll', toggleVisibility)
+        }
 
         return () => {
-            window.removeEventListener('scroll', toggleVisibility)
+            if (ref) {
+                ref.removeEventListener('scroll', toggleVisibility)
+            }
         }
     }, [props])
 

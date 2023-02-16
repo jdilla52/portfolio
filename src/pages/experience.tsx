@@ -64,6 +64,7 @@ const Experience = () => {
                     </div>
                     <ScrollableArrow outerRef={getRef}/>
                 </div>
+                <ScrollableArrow outerRef={getRef}/>
             </div>
         </div>
     )
