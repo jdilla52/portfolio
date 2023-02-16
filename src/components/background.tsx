@@ -64,7 +64,7 @@ export default function Scene(props: any) {
     return (
         <div className="absolute top-0 left-0 w-screen h-screen bg-stone-300">
 
-            <Canvas {...props} camera={{ position: [0.0, 0.0, 1.0]}}>
+            <Canvas {...props} camera={{ position: [0.0, 0.0, 0.5]}}>
                 <directionalLight intensity={0.75}/>
                 <ambientLight intensity={0.75}/>
                 <Cube/>
