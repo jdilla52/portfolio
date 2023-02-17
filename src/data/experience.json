@@ -1,0 +1,205 @@
+{
+  "roles": [
+    {
+      "company": "Bitksi",
+      "role": "senior software engineer",
+      "headline": "Built up backend apis and data components in Rust to support our web3 wallet. Solved data issues and scalability challenges while delivering on core features.",
+      "projects": [
+        {
+          "name": "Floor prices & alerts",
+          "description": "A feature to alert users when their assets changed price and internal api for floor prices.",
+          "details": [
+            "Established an internal api and store for all floor prices for a given contract.",
+            "Used polling and kafka to keep internal data stores up to date.",
+            "Setup pipeline to check user alerts and send notifications."
+          ]
+        },
+        {
+          "name": "Bids & offers",
+          "description": "Notified users when they received bids or offers for items in their wallet.",
+          "details": [
+            "Leveraged websockets for consuming large quantities of off chain chain events moving them to kafka.",
+            "Enriched events with contract and token metadata.",
+            "Established loose heuristic for filtering spam and low ball offers."
+          ]
+        },
+        {
+          "name": "Contract metadata",
+          "description": "Api for contract and token metadata",
+          "details": [
+            "Indexed large quantity of token metadata from the past several years",
+            "Setup pipeline to update metadata based on opesea streams",
+            "Built a heurstic and multi-stage pipeline to enrich contract metadata pulling results from a large number of third party sources as well as on-chain."
+          ]
+        },
+        {
+          "name": "Activity",
+          "description": "Collaborated to deliver a new activity feed and notifications of users on chain actions.",
+          "details": [
+            "Wrote custom Rust urdfs for spark allowing consolidated high performance message decoding and modeling.",
+            "Replaced a spark pipeline with custom rust resulting in an order of magnitude improvement in end to end performance.",
+            "Reduced the cost of third party api’s by half and greatly reduces pipeline complexity and footprint.",
+            "Migrated from msk to confluent kafka and from on prem cockroach to cloud"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Metafold",
+      "role": "advisor",
+      "headline": "An incredible startup focused on reducing the barrier to entry for lattice generation in 3D printing through a realtime web interface. I advise on implementation, ux and a variety of other topics."
+    },
+    {
+      "company": "Branch Technology",
+      "role": "senior software engineer",
+      "headline": "Owned cloud adoption and application at Branch. Lead a small team focused on 3d printing in construction. A wide range of responsibility from client facing frontend to iiot data aggregation and robotics. Used a wide range of languages and technologies.",
+      "projects": [
+        {
+          "name": "Design Engine",
+          "description": "A tool for architects to design and evaluate 3d printed facades.",
+          "details": [
+            "Abstracted a licensed Wasm based 3d scene (Hoops) to create a highly interactive 3d tool using React typescript.",
+            "Developed a highly parallel serverless architecture using step-functions and Kinesis.",
+            "Experience with modern abstracted IAC using Terraform and aws-cdk to deliver a large and complex application.",
+            "Utilized the c++ aws sdk and the Parasolid Kernel to deliver low latency and minimal bundle size serverless functions."
+          ]
+        },
+        {
+          "name": "Ros",
+          "description": "Developed 2 mvp applications for controlling robotic motion.",
+          "details": [
+            "Used React + three.js. to deliver a realtime web client for the evaluation robotic motion.",
+            "Developed a simulation platform Using websockets + message bundling to synchronize webgl client with a Ros based c++ & python backend."
+          ]
+        },
+        {
+          "name": "IIOT",
+          "description": "Implemented a popular industry design as an end to end solution for data collection, aggregation and insight creation.",
+          "details": [
+            "Started and managed Eks cluster using standard tools - terraform, helm, kubectl.",
+            "Designed and collaborated on a highly available architecture based on UNS (unified namespace).",
+            "Built and managed a number of tool to support UNS such as RabbitMq, InfluxDb and scalable Rust transforms.",
+            "Using Rust built a high velocity SparkplugB compliant Tcp - Mqtt server for low latency transmission of device state."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Adidas",
+      "role": "Senior Digital Creator",
+      "headline": "Lead a team of three team members, as well as a 750k consulting budget. Drove development to operationalize theoretical manufacturing techniques resulting in computer graphics centric fullstack applications primarily leveraging cpp, node and python.",
+      "projects": [
+        {
+          "name": "4d V2",
+          "description": "Developed a concept for multi-cell lattice.",
+          "details": [
+            "Using data science techniques explored and simulated a large domain of lattices.",
+            "Multiscale modeling: Dramatically reduced optimization time by creating a method for generating material models, including interpolation, n-dimenstional searching and custom curve fitting.",
+            "Periodic meshing: Developed method for generating periodic surface meshes from arbitrary lattices using python."
+          ]
+        },
+        {
+          "name": "4d Cush",
+          "description": "Managed and contributed to development of lifestyle 3d printed components.",
+          "details": [
+          ]
+        },
+        {
+          "name": "4d Creator",
+          "description": "Delivered a fullstack application for lattice generation.",
+          "details": [
+            "Developed a long running job api using the Kubernetes client sdk in Nodejs.",
+            "Contributed to numerous Kafka services c++, python, Nodejs.",
+            "Developed Jenkins pipelines for unique and varied build scenarios per service.",
+            "Married official adidas React UI libraries with a 3d scene to deliver highly interactive solutions.",
+            "Ported the project from Redux to Redux toolkit to modernize the handling of long running asynchronous state."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Adidas",
+      "role": "Manager Digital Creator",
+      "headline": "Drove digital fabrication methods in adidas r&d. Delivered a mass produced 3d printed product called 4d",
+      "projects": [
+        {
+          "name": "4d V1",
+          "description": "Developed a pipeline for the production of a mass produces 3d printed product.",
+          "details": [
+            "Responsible for backend Python services to perform 3D operations.",
+            "Ported and improved a legacy C# library for 3D operations.",
+            "Developed initial react + three.js frontend for lattice generation."
+          ]
+        },
+        {
+          "name": "Strung",
+          "description": "Investigated an initial methodology for a robotic produced textile.",
+          "details": [
+            "Co-opted a cnc and created an prototype method to wind tpu filament around an armature",
+            "Collaborated to develop a three.js application to design textiles using a greedy algorithm."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Adidas",
+      "role": "Junior Digital Creator",
+      "headline": "Delivered a number of products using computational design and digital fabrication.",
+      "projects": [
+        {
+          "name": "4d",
+          "description": "Delivered a prototype 3d printed product.",
+          "details": [
+            "Developed a python library for 3d operations.",
+            "Developed a C# library and application for 3d operations.",
+            "Developed a hex meshing approach for 3d printing."
+          ]
+        },
+        {
+          "name": "Forged",
+          "description": "Contributed to a project for a molded shoe.",
+          "details": [
+            "Developed computational patterns for a shoe upper."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Adidas",
+      "role": "Contractor",
+      "headline": "Moved some of their development process to 3D and to explore generative tools.",
+      "projects": [
+        {
+          "name": "Harden reaction diffusion",
+          "description": "Developed an interface for designers to explore reaction diffusion.",
+          "details": [
+            "Developed reaction-diffusion based outsole tool in Process.js.",
+            "Exposed myself to shader creation using Modo.",
+            "Used grasshopper to process scan data for computational design."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Altair",
+      "role": "Intern",
+      "headline": "Using Altair’s background in simulation and optimization software, collaborated with engineers to go about designing a running blade and prosthetic system for paralympian, Blake Leaper.",
+      "projects": [
+        {
+          "name": "Blade",
+          "description": "Developed a blade for a paralympian.",
+          "details": [
+            "Developed a blade for a paralympian.",
+            "Exposed to inspire and hyper works optimization software Inspire and Optistruct.",
+            "Leveraged rhino and grasshopper for blade design."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Khora",
+      "role": "Founder",
+      "headline": "Khora was a startup which was founded with the idea of enabling mass customization of home goods through the use of 3d web based interfaces and digital fabrication."
+    }
+  ]
+}
