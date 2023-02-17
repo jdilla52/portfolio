@@ -11,7 +11,7 @@ type ProjectCardProps = {
 const ProjectCard = ({title, description, link}: ProjectCardProps) => {
     const [toggle, setToggle] = useState(false)
     return (
-        <div className="w-full flex flex-col justify-center border-2 border-stone-800"
+        <div className="w-full flex flex-col justify-center border-2 border-stone-800 font-cairo"
              onClick={() => setToggle(!toggle)}>
             <div className="w-full flex flex-row justify-left pl-6 p-4 gap-7">
                 <div className="h-28 w-36 bg-stone-100"></div>

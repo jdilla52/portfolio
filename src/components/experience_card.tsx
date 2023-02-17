@@ -8,8 +8,8 @@ const ExperienceCard = ({props}: { props: Role }) => {
     // todo add collapse on move out of screen
     // todo add animation for expand
     return (
-        <>
-            {expanded ? <div className="flex flex-row">
+        <div className="flex flex-row font-cairo">
+            {expanded ? <>
                     <div className="flex flex-row grow justify-between border-2 border-stone-800 w-full p-4 ml-16 my-4"
                          onClick={() => props.projects ? setExpanded(!expanded) : () => null}>
                         <div className="flex flex-col items-left justify-center">
@@ -18,7 +18,7 @@ const ExperienceCard = ({props}: { props: Role }) => {
                                 <p className="text-lg">{props.company}: {props.role}</p>
                             </div>
                             <p className="">{props.headline}</p>
-                            {props.projects ? <div className="flex flex-col text-sm gap-1">
+                            {props.projects ? <div className="flex flex-col text-sm gap-1 pt-1">
                                 {props.projects.map((project: Project) => {
                                     return (
                                         <div key={project.name} className="flex flex-col">
@@ -38,8 +38,8 @@ const ExperienceCard = ({props}: { props: Role }) => {
                                 <Arrow t={expanded ? 1.0 : 0.0}/>
                             </div> : null}
                     </div>
-                </div> :
-                <div className="flex flex-row">
+                </> :
+                <>
                     <div className="flex flex-row w-36 border-r-2 border-stone-800 items-center justify-end">
                         <div className="pr-6">
                             {props.date.length === 1 && <p className="">{props.date[0]}</p>}
@@ -60,8 +60,8 @@ const ExperienceCard = ({props}: { props: Role }) => {
                                 <Arrow t={expanded ? 1.0 : 0.0}/>
                             </div> : null}
                     </div>
-                </div>}
-        </>
+                </>}
+        </div>
     )
 }
 

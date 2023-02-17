@@ -4,8 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        heading: ['Montserrat', 'sans-serif'],
-        body: ['Hind', 'sans-serif'],
+        'cairo': ['Cairo', 'sans-serif']
       },
       strokeWidth: {
         '3': '3px',
