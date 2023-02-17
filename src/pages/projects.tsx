@@ -24,9 +24,9 @@ const Projects = () => {
             </div>
             <div className="w-36">
                 <div className="flex flex-col h-screen p-6 fixed place-content-between items-center">
-                            <Link href="/">
-                                <Logo/>
-                            </Link>
+                    <Link href="/">
+                        <Logo/>
+                    </Link>
                     <ScrollableArrow outerRef={getRef}/>
                 </div>
             </div>

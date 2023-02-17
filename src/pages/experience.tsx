@@ -14,8 +14,10 @@ export type Project = {
 
 export type Role = {
     company: string,
+    date: Array<string>,
     role: string,
     headline: string,
+    image: string | null,
     projects:Array<Project> | null
 }
 
@@ -42,7 +44,7 @@ const Experience = () => {
                     )
                 })}
             </div>
-            <div className="w-36">
+            <div className="w-36 flex-none">
                 <div className="flex flex-col h-screen p-6 fixed place-content-between items-center">
                     <div className="">
                         <Link href="/">

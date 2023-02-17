@@ -2,8 +2,10 @@
   "roles": [
     {
       "company": "Bitksi",
-      "role": "senior software engineer",
-      "headline": "Built up backend apis and data components in Rust to support our web3 wallet. Solved data issues and scalability challenges while delivering on core features.",
+      "date": ["2022", "2023"],
+      "role": "Senior Software Engineer",
+      "image": "/bitski.svg",
+      "headline": "Solved core data issues and scalability challenges while delivering on core features in Rust.",
       "projects": [
         {
           "name": "Floor prices & alerts",
@@ -46,13 +48,17 @@
     },
     {
       "company": "Metafold",
-      "role": "advisor",
-      "headline": "An incredible startup focused on reducing the barrier to entry for lattice generation in 3D printing through a realtime web interface. I advise on implementation, ux and a variety of other topics."
+      "date": ["2022", "2023"],
+      "role": "Advisor",
+      "image": "/metafold2.svg",
+      "headline": "An incredible startup focused on reducing the barrier to entry for lattice generation in 3D printing through a realtime web interface."
     },
     {
       "company": "Branch Technology",
-      "role": "senior software engineer",
-      "headline": "Owned cloud adoption and application at Branch. Lead a small team focused on 3d printing in construction. A wide range of responsibility from client facing frontend to iiot data aggregation and robotics. Used a wide range of languages and technologies.",
+      "date": ["2021", "2022"],
+      "role": "Senior Software Engineer",
+      "image": "/branch.svg",
+      "headline": "Owned cloud adoption while leading a small team focused on 3d printing in construction. A wide range of responsibility from client facing frontend to iiot data aggregation and robotics.",
       "projects": [
         {
           "name": "Design Engine",
@@ -86,8 +92,10 @@
     },
     {
       "company": "Adidas",
+      "date": ["2018", "2021"],
       "role": "Senior Digital Creator",
-      "headline": "Lead a team of three team members, as well as a 750k consulting budget. Drove development to operationalize theoretical manufacturing techniques resulting in computer graphics centric fullstack applications primarily leveraging cpp, node and python.",
+      "image": "/adidas.svg",
+      "headline": "Lead a team of three team members, as well as a 750k consulting budget. Drove development of theoretical manufacturing techniques resulting in computer graphics centric fullstack applications.",
       "projects": [
         {
           "name": "4d V2",
@@ -119,8 +127,10 @@
     },
     {
       "company": "Adidas",
+      "date": ["2016", "2018"],
       "role": "Manager Digital Creator",
-      "headline": "Drove digital fabrication methods in adidas r&d. Delivered a mass produced 3d printed product called 4d",
+      "image": "/adidas.svg",
+      "headline": "Drove digital fabrication methods in adidas r&d. Focused on software development for 4d",
       "projects": [
         {
           "name": "4d V1",
@@ -143,8 +153,10 @@
     },
     {
       "company": "Adidas",
+      "date": ["2015", "2018"],
       "role": "Junior Digital Creator",
-      "headline": "Delivered a number of products using computational design and digital fabrication.",
+      "image": "/adidas.svg",
+      "headline": "Delivered a mass produced 3d printed product called 4d, while delivering a range of other projects.",
       "projects": [
         {
           "name": "4d",
@@ -166,8 +178,10 @@
     },
     {
       "company": "Adidas",
+      "date": ["2014"],
       "role": "Contractor",
-      "headline": "Moved some of their development process to 3D and to explore generative tools.",
+      "image": "/adidas.svg",
+      "headline": "Extended from initial 3 contract to 1 year. Moved some of their development process to 3D and to explore generative tools.",
       "projects": [
         {
           "name": "Harden reaction diffusion",
@@ -182,7 +196,9 @@
     },
     {
       "company": "Altair",
+      "date": ["2014"],
       "role": "Intern",
+      "image": "/altair.svg",
       "headline": "Using Altair’s background in simulation and optimization software, collaborated with engineers to go about designing a running blade and prosthetic system for paralympian, Blake Leaper.",
       "projects": [
         {
@@ -198,6 +214,7 @@
     },
     {
       "company": "Khora",
+      "date": ["2012", "2013"],
       "role": "Founder",
       "headline": "Khora was a startup which was founded with the idea of enabling mass customization of home goods through the use of 3d web based interfaces and digital fabrication."
     }
