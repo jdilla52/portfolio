@@ -1,0 +1,91 @@
+{
+  "projects": [
+    {
+      "name": "web3-search",
+      "link": "https://github.com/jdilla52/web3-search",
+      "description": "weighted binary search for find the creation block of a web3 contract",
+      "details": [
+        {
+          "details": "An exploration into finding the creation block of a web3 contract via weighted binary search. This is a useful approach when you have a correlation or where a loose heuristic can be applied to approximate the target value. In this case we often knew the approximate age of a web3 contract based on indexed transactions."
+        },
+        {
+          "details": "For this use case traditional binary search averages to around 27 iterations. This weighted approach greatly depends on the accuracy of the guess, however often based on sample data would converge in 12-14."
+        },
+        {
+          "details": "Our use case was to minimize the cost, however future work will go into making this parallel to reduce search time."
+        }
+      ]
+    },
+    {
+      "name": "ray-tracer",
+      "link": "https://github.com/jdilla52/ray-tracer",
+      "description": "A ray tracer written in rust",
+      "thumb": "ray_tracer1.png",
+      "details": [
+        {
+          "details": "An implementation of Ray Tracing In One Weekend + The Next Week by Peter Shirley. https://raytracing.github.io/books/RayTracingInOneWeekend.html",
+          "image": "/ray_tracer1.png"
+        }
+      ]
+    },
+    {
+      "name": "cache-clouds",
+      "link": "https://github.com/jdilla52/cacheclouds-nft-react",
+      "description": "A react dropsite for the cacheclouds NFT",
+      "thumb": "cache_clouds1.png",
+      "details": [
+        {
+          "details": "The site was a fun project I made for some friends. We didn't end launching however there were a number of entertaining aspects to the site.",
+          "image": "/cache_clouds3.png"
+        },
+        {
+          "details": "We went ham with lottie files and other svg animations to try and  create a 8bit feel to the site.",
+          "image": "/cache_clouds2.png"
+        }
+      ]
+    },
+    {
+      "name": "bevy_test",
+      "link": "https://github.com/jdilla52/bevy_test",
+      "description": "A simple bevy chess game",
+      "thumb": "bevy_test1.png",
+      "details": [
+        {
+          "details": "A simple chess game written in rust using the bevy game engine. It's based on an excellent but <a href='https://caballerocoll.com/blog/bevy-chess-tutorial/'>old introduction</a> to Bevy. The game is a work in progress and is not yet complete.",
+          "image": "/bevy_test1.png"
+        }
+      ]
+    },
+    {
+      "name": "web3 graph",
+      "link": "https://github.com/jdilla52/nft-indexer/tree/graph",
+      "description": "Experiement representing relationships in web3 with a graphdb"
+    },
+    {
+      "name": "monte carlo example",
+      "link": "https://github.com/jdilla52/mc-example",
+      "description": "Monte-carlo explorations based on ray tracing in a weekend and keenan crane"
+    },
+    {
+      "name": "mqtt explorations",
+      "description": "A collection of mqtt explorations",
+      "details": [
+        {
+          "title": "mqtt state graphdb",
+          "details": "mqtt topic state represented as a graphdb. The idea was to represent the state of the broker overtime to better enable data retrieval over time from a hierarchical datalake",
+          "link": "https://github.com/jdilla52/mqtt-state-graphdb-rust"
+        },
+        {
+          "title": "mqtt kafka bridge",
+          "details": "a shovel for moving data from mqtt to kafka",
+          "link": "https://github.com/jdilla52/mqtt-kafka-rust-bridge"
+        },
+        {
+          "title": "mqtt rabbitmq bridge",
+          "details": "a shovel for moving data from mqtt to rabbitmq",
+          "link": "https://github.com/jdilla52/rabbitmq_rust"
+        }
+      ]
+    }
+  ]
+}
