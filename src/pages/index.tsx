@@ -4,6 +4,7 @@ import Logo from "../assets/logo";
 import React from "react";
 import Linkedin from "../assets/linkedin";
 import Github from "../assets/github";
+import SpecialBullet from "../assets/special_bullet";
 
 const Home: NextPage = () => {
     return (
@@ -15,7 +16,7 @@ const Home: NextPage = () => {
                 </div>
 
                 <div className="flex flex-col items-center justify-center px-4 gap-4">
-                    <div className="flex flex-row items-center justify-center gap-10">
+                    <div className="flex flex-row items-center justify-center gap-9">
                         <a className="h-10" href="https://github.com/jdilla52">
                             <Github/>
                         </a>
@@ -23,14 +24,10 @@ const Home: NextPage = () => {
                             <Linkedin/>
                         </a>
                     </div>
-                    <ol className="flex flex-col justify-left gap-2 list-disc">
-                        <li>
-                            <Link href="/experience">experience</Link>
-                        </li>
-                        <li>
-                            <Link href="/projects">side projects</Link>
-                        </li>
-                    </ol>
+                    <div className="flex flex-col justify-left gap-2 pl-2">
+                        <SpecialBullet link={"/experience"} content={"experience"}/>
+                        <SpecialBullet link={"/projects"} content={"side projects"}/>
+                    </div>
                 </div>
             </main>
         </>
