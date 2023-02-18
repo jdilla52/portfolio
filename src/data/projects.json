@@ -1,37 +1,21 @@
 {
   "projects": [
     {
-      "name": "web3-search",
-      "link": "https://github.com/jdilla52/web3-search",
-      "description": "weighted binary search for find the creation block of a web3 contract",
-      "sections": [
-        {
-          "details": "An exploration into finding the creation block of a web3 contract via weighted binary search. This is a useful approach when you have a correlation or where a loose heuristic can be applied to approximate the target value. In this case we often knew the approximate age of a web3 contract based on indexed transactions."
-        },
-        {
-          "details": "For this use case traditional binary search averages to around 27 iterations. This weighted approach greatly depends on the accuracy of the guess, however often based on sample data would converge in 12-14."
-        },
-        {
-          "details": "Our use case was to minimize the cost, however future work will go into moving it to ternary search and making this parallel to reduce search time."
-        }
-      ]
-    },
-    {
-      "name": "ray-tracer",
+      "name": "Ray Tracer",
       "link": "https://github.com/jdilla52/ray-tracer",
-      "description": "A ray tracer written in rust",
+      "description": "A 3d ray tracer written in rust.",
       "thumb": "ray_tracer1.png",
       "sections": [
         {
-          "details": "An implementation of Ray Tracing In One Weekend and The Next Week by Peter Shirley. https://raytracing.github.io/books/RayTracingInOneWeekend.html",
+          "details": "An implementation of Ray Tracing In One Weekend, The Next Week, and portions of The Rest of Your Life by Peter Shirley. https://raytracing.github.io/books/RayTracingInOneWeekend.html",
           "image": "/ray_tracer1.png"
         }
       ]
     },
     {
-      "name": "cache-clouds",
+      "name": "Cache Clouds",
       "link": "https://github.com/jdilla52/cacheclouds-nft-react",
-      "description": "A react dropsite for the cacheclouds NFT",
+      "description": "A react dropsite for the cache clouds NFT.",
       "thumb": "cache_clouds1.png",
       "sections": [
         {
@@ -45,44 +29,63 @@
       ]
     },
     {
-      "name": "bevy_test",
+      "name": "Bevy Test",
       "link": "https://github.com/jdilla52/bevy_test",
-      "description": "A simple bevy chess game",
+      "description": "A simple bevy chess game.",
       "thumb": "bevy_test1.png",
       "sections": [
         {
-          "details": "A simple chess game written in rust using the bevy game engine. It's based on an excellent but <a href='https://caballerocoll.com/blog/bevy-chess-tutorial/'>old introduction</a> to Bevy. The game is a work in progress and is not yet complete.",
+          "details": "A simple chess game written in rust using the bevy game engine. It's based on an excellent but old introduction to Bevy: https://caballerocoll.com/blog/bevy-chess-tutorial. The game is a work in progress and is not yet complete.",
           "image": "/bevy_test1.png"
         }
       ]
     },
     {
-      "name": "web3 graph",
-      "link": "https://github.com/jdilla52/nft-indexer/tree/graph",
-      "description": "Experiement representing relationships in web3 with a graphdb"
-    },
-    {
-      "name": "monte carlo example",
-      "link": "https://github.com/jdilla52/mc-example",
-      "description": "Monte-carlo explorations based on ray tracing in a weekend and keenan crane"
-    },
-    {
-      "name": "mqtt explorations",
-      "description": "A collection of mqtt explorations",
+      "name": "Web3 Search",
+      "link": "https://github.com/jdilla52/web3-search",
+      "description": "Weighted binary search for identifying the creation block of a web3 contract.",
       "sections": [
         {
-          "title": "mqtt state graphdb",
-          "details": "mqtt topic state represented as a graphdb. The idea was to represent the state of the broker overtime to better enable data retrieval over time from a hierarchical datalake",
+          "title": "Background",
+          "details": "An exploration into finding the creation block of a web3 contract via weighted binary search. This is a useful approach when you have a correlation or where a loose heuristic can be applied to approximate the target value. In this case we often knew the approximate age of a web3 contract based on indexed transactions."
+        },
+        {
+          "title": "Our Use Case",
+          "details": "For this use case traditional binary search averages to around 27 iterations. This weighted approach greatly depends on the accuracy of the guess, however often based on sample data would converge in 12-14."
+        },
+        {
+          "title": "Future Work",
+          "details": "Our use case was to minimize the cost, however future work will go into moving it to a weighted ternary search and explore the cost to speed trade off leveraging parallelism."
+        }
+      ]
+    },
+    {
+      "name": "Web3 Graph",
+      "link": "https://github.com/jdilla52/nft-indexer/tree/graph",
+      "description": "Experiment representing relationships in web3 with a graphdb."
+    },
+    {
+      "name": "Monte Carlo Example",
+      "link": "https://github.com/jdilla52/mc-example",
+      "description": "Monte-carlo explorations based on Ray Tracing in a Weekend and Keenan Crane."
+    },
+    {
+      "name": "Mqtt Explorations",
+      "description": "A collection of mqtt explorations.",
+      "sections": [
+        {
+          "title": "Mqtt state graphdb",
+          "details": "Mqtt topic state represented as a graphdb. The idea was to represent the state of the broker over time to better enable data retrieval from a hierarchical data-lake.",
           "link": "https://github.com/jdilla52/mqtt-state-graphdb-rust"
         },
         {
-          "title": "mqtt kafka bridge",
-          "details": "a shovel for moving data from mqtt to kafka",
+          "title": "Mqtt Kafka Bridge",
+          "details": "A shovel for moving data from mqtt to kafka.",
           "link": "https://github.com/jdilla52/mqtt-kafka-rust-bridge"
         },
         {
-          "title": "mqtt rabbitmq bridge",
-          "details": "a shovel for moving data from mqtt to rabbitmq",
+          "title": "Mqtt Rabbitmq Bridge",
+          "details": "A shovel for moving data from mqtt to rabbitmq.",
           "link": "https://github.com/jdilla52/rabbitmq_rust"
         }
       ]
