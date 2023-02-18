@@ -3,8 +3,14 @@ import React, {useEffect, useState} from "react";
 import type {Project, Role} from "../pages/experience";
 import {goTo} from "../utils/propogation";
 
-const ExperienceCard = ({props}: { props: Role }) => {
-    const [expanded, setExpanded] = useState(false)
+
+type ExperienceCardProps = {
+    props: Role,
+    expanded: boolean | undefined
+    setExpanded: () => void
+}
+
+const ExperienceCard = ({props, expanded, setExpanded}: ExperienceCardProps) => {
     const ref = React.useRef<HTMLDivElement>(null)
     useEffect(() => {
         if (expanded && ref.current)
@@ -16,7 +22,7 @@ const ExperienceCard = ({props}: { props: Role }) => {
         <div className="flex flex-row font-cairo" ref={ref}>
             {expanded ? <>
                     <div className="flex flex-row grow justify-between border-2 border-stone-800 w-full p-4 ml-16 my-4"
-                         onClick={() => props.projects ? setExpanded(!expanded) : () => null}>
+                         onClick={() => props.projects ? setExpanded() : () => null}>
                         <div className="flex flex-col items-left justify-center">
                             <div className="flex flex-row items-center gap-3 pb-1">
                                 {props.image ? <img className="h-8 w-8" src={props.image}/> : null}
@@ -52,7 +58,7 @@ const ExperienceCard = ({props}: { props: Role }) => {
                         </div>
                     </div>
                     <div className="flex flex-row grow justify-between border-2 border-stone-800 w-96 p-4 ml-16 my-4"
-                         onClick={() => props.projects ? setExpanded(!expanded) : null}>
+                         onClick={() => props.projects ? setExpanded() : null}>
                         <div className="flex flex-col items-left justify-center">
                             <button className="flex flex-row items-center gap-3 pb-1"
                                     onClick={(e) => goTo(e, props.link)}>
