@@ -1,6 +1,7 @@
 import Arrow from "../assets/arrow";
 import {useState} from "react";
 import type {Project, Role} from "../pages/experience";
+import {goTo} from "../utils/propogation";
 
 const ExperienceCard = ({props}: { props: Role }) => {
     const [expanded, setExpanded] = useState(false)
@@ -27,7 +28,7 @@ const ExperienceCard = ({props}: { props: Role }) => {
                                                 {project.details.map((detail: string) => {
                                                     return (<li key={detail}>{detail}</li>)
                                                 })}
-                                            </ol>: null}
+                                            </ol> : null}
                                         </div>
                                     )
                                 })}
@@ -49,10 +50,11 @@ const ExperienceCard = ({props}: { props: Role }) => {
                     <div className="flex flex-row grow justify-between border-2 border-stone-800 w-96 p-4 ml-16 my-4"
                          onClick={() => props.projects ? setExpanded(!expanded) : () => null}>
                         <div className="flex flex-col items-left justify-center">
-                            <div className="flex flex-row items-center gap-3 pb-1">
+                            <button className="flex flex-row items-center gap-3 pb-1"
+                                    onClick={(e) => goTo(e, props.link)}>
                                 {props.image ? <img className="h-8 w-8" src={props.image}/> : null}
                                 <p className="text-lg">{props.company}: {props.role}</p>
-                            </div>
+                            </button>
                             <p className="">{props.headline}</p>
                         </div>
                         {props.projects ?

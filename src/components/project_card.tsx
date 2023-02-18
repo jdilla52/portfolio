@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import Github from "../assets/github";
 import {Project, Section} from "../pages/projects";
 import {Role} from "../pages/experience";
+import {goTo} from "../utils/propogation";
 
 
 const ProjectCard = ({props}: { props: Project }) => {
@@ -25,28 +26,28 @@ const ProjectCard = ({props}: { props: Project }) => {
                             {props.sections.map((section: Section) => {
                                 return (
                                     <div key={section.details} className="flex flex-row w-full">
-                                            {section.link ?
-                                                <a className="h-6 w-6 mr-4 self-end self-center justify-self-center flex-none"
-                                                   href={section.link}>
-                                                    <Github/>
-                                                </a> : null}
+                                        {section.link ?
+                                            <button
+                                                className="h-6 w-6 mr-4 self-end self-center justify-self-center flex-none"
+                                                onClick={(e) => goTo(e, section.link)}>
+                                                <Github/>
+                                            </button> : null}
                                         {section.image ? <img className="w-1/2 flex-none" src={section.image}/> : null}
                                         <div className="flex flex-col flex-grow p-2">
                                             {section.title ?
                                                 <h4 className="flex-none">{section.title.toUpperCase()}</h4> : null}
                                             <p className="">{section.details}</p>
-
                                         </div>
                                     </div>
                                 )
                             })}
                         </div> : null}
                 </div>
-
-                <div className="flex flex-col min-h-max justify-self-end justify-between justify-end contend-end content-between flex-none">
-                    {props.link ? <a className="h-7" href={props.link}>
+                <div
+                    className="flex flex-col min-h-max justify-self-end justify-between justify-end contend-end content-between flex-none">
+                    {props.link ? <button className="h-7" onClick={(e) => goTo(e, props.link)}>
                         <Github/>
-                    </a> : null}
+                    </button> : null}
                     {props.sections ? <div className="h-3 self-end justify-self-end">
                         <Arrow t={toggle ? 1.0 : 0.0}/>
                     </div> : null}

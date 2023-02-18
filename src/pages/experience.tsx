@@ -14,11 +14,12 @@ export type Project = {
 
 export type Role = {
     company: string,
+    link: string | null,
     date: Array<string>,
     role: string,
     headline: string,
     image: string | null,
-    projects:Array<Project> | null
+    projects: Array<Project> | null
 }
 
 type RoleResponse = {
