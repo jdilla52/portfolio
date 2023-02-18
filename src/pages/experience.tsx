@@ -45,24 +45,23 @@ const Experience = () => {
         setExpanded({...init_state, [name]: !expanded[name]})
     }
     return (
-        <div className="flex flex-row bg-stone-300 min-h-screen" ref={outerRef}>
-            <div className="grow w-fit flex flex-col items-center p-4
+        <div className="relative fixed w-screen h-screen flex flex-row">
+            <div className="overflow-auto w-screen" ref={outerRef}>
+                <div className="grow w-[calc(100%-theme(space.36))] flex flex-col items-center p-4
             text-stone-800 overflow-auto scrollbar">
-                {experienceData.roles.map((role: Role) => {
-                    return (
-                        <ExperienceCard key={role.headline} props={role} expanded={expanded[getRoleKey(role)]}
-                                        setExpanded={setExpandedState(getRoleKey(role))}/>
-                    )
-                })}
+                    {experienceData.roles.map((role: Role) => {
+                        return (
+                            <ExperienceCard key={role.headline} props={role} expanded={expanded[getRoleKey(role)]}
+                                            setExpanded={setExpandedState(getRoleKey(role))}/>
+                        )
+                    })}
+                </div>
             </div>
-            <div className="w-36 flex-none">
-                <div className="flex flex-col h-screen p-6 fixed place-content-between items-center">
-                    <div className="">
-                        <Link href="/">
-                            <Logo/>
-                        </Link>
-                    </div>
-                    <ScrollableArrow outerRef={getRef}/>
+            <div className="fixed flex flex-col right-5 h-screen w-36 p-6 justify-between">
+                <div className="flex-col items-center">
+                    <Link href="/">
+                        <Logo/>
+                    </Link>
                 </div>
                 <ScrollableArrow outerRef={getRef}/>
             </div>

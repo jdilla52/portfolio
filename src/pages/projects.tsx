@@ -44,22 +44,24 @@ const Projects = () => {
         setExpanded({...init_state, [name]: !expanded[name]})
     }
     return (
-        <div className="flex flex-row bg-stone-300 min-h-screen" ref={outerRef}>
-            <div className="grow flex w-fit flex-col items-center text-stone-800 overflow-auto ml-8 mt-8 mr-2 gap-4">
-                {projectData.projects.map((project: Project) => {
-                    return (
-                        <ProjectCard key={project.name} props={project} expanded={expanded[project.name]}
-                                     setExpanded={setExpandedState(project.name)}/>
-                    )
-                })
-                }
+        <div className="relative fixed w-screen h-screen flex flex-row">
+            <div className="overflow-auto w-screen" ref={outerRef}>
+                <div
+                    className="grow flex w-[calc(100%-theme(space.36))] flex-col items-center text-stone-800 ml-8 mt-8 mr-2 gap-4">
+                    {projectData.projects.map((project: Project) => {
+                        return (
+                            <ProjectCard key={project.name} props={project} expanded={expanded[project.name]}
+                                         setExpanded={setExpandedState(project.name)}/>
+                        )
+                    })
+                    }
+                </div>
             </div>
-            <div className="w-36">
-                <div className="flex flex-col h-screen p-6 fixed place-content-between items-center">
+            <div className="fixed flex flex-col right-5 h-screen w-36 p-6 justify-between">
+                <div className="flex-col items-center">
                     <Link href="/">
                         <Logo/>
                     </Link>
-                    <ScrollableArrow outerRef={getRef}/>
                 </div>
                 <ScrollableArrow outerRef={getRef}/>
             </div>

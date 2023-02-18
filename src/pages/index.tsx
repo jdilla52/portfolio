@@ -9,7 +9,7 @@ import SpecialBullet from "../assets/special_bullet";
 const Home: NextPage = () => {
     return (
         <>
-            <main className="flex min-h-screen flex-col items-center justify-center bg-stone-300
+            <main className="fixed w-screen h-screen flex flex-col items-center justify-center
             font-sans font-normal leading-relaxed text-stone-800 body-font font-cairo">
                 <div className="w-48 p-6">
                     <Logo/>
