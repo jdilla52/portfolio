@@ -1,15 +1,19 @@
 import Arrow from "../assets/arrow";
-import {useState} from "react";
+import React, {useEffect, useState} from "react";
 import type {Project, Role} from "../pages/experience";
 import {goTo} from "../utils/propogation";
 
 const ExperienceCard = ({props}: { props: Role }) => {
     const [expanded, setExpanded] = useState(false)
-    // todo add scroll on expand
+    const ref = React.useRef<HTMLDivElement>(null)
+    useEffect(() => {
+        if (expanded && ref.current)
+            ref.current.scrollIntoView({behavior: "smooth", block: "start"})
+    }, [expanded])
     // todo add collapse on move out of screen
     // todo add animation for expand
     return (
-        <div className="flex flex-row font-cairo">
+        <div className="flex flex-row font-cairo" ref={ref}>
             {expanded ? <>
                     <div className="flex flex-row grow justify-between border-2 border-stone-800 w-full p-4 ml-16 my-4"
                          onClick={() => props.projects ? setExpanded(!expanded) : () => null}>
@@ -48,7 +52,7 @@ const ExperienceCard = ({props}: { props: Role }) => {
                         </div>
                     </div>
                     <div className="flex flex-row grow justify-between border-2 border-stone-800 w-96 p-4 ml-16 my-4"
-                         onClick={() => props.projects ? setExpanded(!expanded) : () => null}>
+                         onClick={() => props.projects ? setExpanded(!expanded) : null}>
                         <div className="flex flex-col items-left justify-center">
                             <button className="flex flex-row items-center gap-3 pb-1"
                                     onClick={(e) => goTo(e, props.link)}>

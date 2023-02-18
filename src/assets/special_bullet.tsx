@@ -33,7 +33,7 @@ const SpecialBullet = (props: SpecialBulletProps) => {
     const [hover, isHover] = useHover()
     return (
         <div ref={hover} className="flex flex-row items-center gap-2 body-font font-cairo">
-            <div className="w-3">
+            <div className="w-3 pt-1">
                 <svg className="stroke-stone-800 stroke-1" width="100%" height="100%" viewBox="0 0 9 9" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 4.53552L10 4.53552"/>

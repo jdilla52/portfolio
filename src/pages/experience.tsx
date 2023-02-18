@@ -35,6 +35,7 @@ const Experience = () => {
     const getRef = () => {
         return outerRef.current
     }
+
     return (
         <div className="flex flex-row bg-stone-300 min-h-screen" ref={outerRef}>
             <div className="grow w-fit flex flex-col items-center p-4
