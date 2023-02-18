@@ -1,35 +1,56 @@
 import Arrow from "../assets/arrow";
 import React, {useState} from "react";
 import Github from "../assets/github";
+import {Project, Section} from "../pages/projects";
+import {Role} from "../pages/experience";
 
-type ProjectCardProps = {
-    title: string
-    description: string
-    link: string
-}
 
-const ProjectCard = ({title, description, link}: ProjectCardProps) => {
+const ProjectCard = ({props}: { props: Project }) => {
     const [toggle, setToggle] = useState(false)
     return (
-        <div className="w-full flex flex-col justify-center border-2 border-stone-800 font-cairo"
+        <div className="w-full border-2 border-stone-800 font-cairo w-2/3"
              onClick={() => setToggle(!toggle)}>
-            <div className="w-full flex flex-row justify-left pl-6 p-4 gap-7">
-                <div className="h-28 w-36 bg-stone-100"></div>
-                <div className="grow flex flex-col items-left justify-center">
-                    <h3 className="text-lg">{title}</h3>
-                    <p className="">{description}</p>
-                    {toggle && <p className="">test</p>}
-                </div>
-                <div className="justify-self-end place-content-between flex flex-col">
-                    <a className="h-7" href={link}>
-                        <Github/>
-                    </a>
-                    <div className="h-3">
-                        <Arrow t={toggle ? 1.0 : 0.0}/>
+            <div className="w-full flex flex-row justify-between content-between pl-6 p-4 gap-7">
+                {/*<div className="h-28 w-36 bg-stone-100">*/}
+                <div className="grow flex flex-col">
+                    <div className="flex flex-row items-center justify-between gap-3 pb-1">
+                        {props.thumb ? <img className="h-28 w-36" src={props.thumb}/> : null}
+                        <div className="grow flex-none flex flex-col justify-center">
+                            <h3 className="text-lg">{props.name}</h3>
+                            <p className="flex-none">{props.description}</p>
+                        </div>
                     </div>
+                    {(toggle && props.sections) ?
+                        <div className="flex flex-col text-sm gap-1 pt-3 gap-2">
+                            {props.sections.map((section: Section) => {
+                                return (
+                                    <div key={section.details} className="flex flex-row w-full">
+                                            {section.link ?
+                                                <a className="h-6 w-6 mr-4 self-end self-center justify-self-center flex-none"
+                                                   href={section.link}>
+                                                    <Github/>
+                                                </a> : null}
+                                        {section.image ? <img className="w-1/2 flex-none" src={section.image}/> : null}
+                                        <div className="flex flex-col flex-grow p-2">
+                                            {section.title ?
+                                                <h4 className="flex-none">{section.title.toUpperCase()}</h4> : null}
+                                            <p className="">{section.details}</p>
+
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </div> : null}
                 </div>
 
-
+                <div className="flex flex-col min-h-max justify-self-end justify-between justify-end contend-end content-between flex-none">
+                    {props.link ? <a className="h-7" href={props.link}>
+                        <Github/>
+                    </a> : null}
+                    {props.sections ? <div className="h-3 self-end justify-self-end">
+                        <Arrow t={toggle ? 1.0 : 0.0}/>
+                    </div> : null}
+                </div>
             </div>
         </div>
 

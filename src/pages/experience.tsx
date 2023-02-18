@@ -3,7 +3,7 @@ import ExperienceCard from "../components/experience_card";
 import Logo from "../assets/logo";
 import Link from "next/link";
 import ScrollableArrow from "../assets/scrollable_arrow";
-import data from "../data/experience.json";
+import rawExperience from "../data/experience.json";
 
 export type Project = {
     name: string,
@@ -30,7 +30,7 @@ const Experience = () => {
     const outerRef = useRef<HTMLInputElement>(null)
 
     // todo cast json to role response - will move to api
-    const d = data as unknown as RoleResponse;
+    const experienceData = rawExperience as unknown as RoleResponse;
     const getRef = () => {
         return outerRef.current
     }
@@ -38,7 +38,7 @@ const Experience = () => {
         <div className="flex flex-row bg-stone-300 min-h-screen" ref={outerRef}>
             <div className="grow w-fit flex flex-col items-center p-4
             text-stone-800 overflow-auto scrollbar">
-                {d.roles.map((role: Role) => {
+                {experienceData.roles.map((role: Role) => {
                     return (
                         <ExperienceCard key={role.headline} props={role}/>
                     )
