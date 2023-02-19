@@ -49,7 +49,7 @@ const Cube = () => {
     );
     return (
         <mesh ref={mesh} position={[0, 0, 0]} scale={1.0}>
-            <planeGeometry args={[1, 1, 32, 32]} />
+            <planeGeometry args={[1, 1, 32, 32]}/>
             <shaderMaterial
                 fragmentShader={fragmentShader}
                 vertexShader={vertexShader}
@@ -64,7 +64,7 @@ export default function Scene(props: any) {
     return (
         <div className="absolute top-0 left-0 w-screen h-screen bg-stone-300">
 
-            <Canvas {...props} camera={{ position: [0.0, 0.0, 0.5]}}>
+            <Canvas {...props} camera={{position: [0.0, 0.0, 0.5]}}>
                 <directionalLight intensity={0.75}/>
                 <ambientLight intensity={0.75}/>
                 <Cube/>

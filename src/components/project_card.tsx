@@ -1,9 +1,9 @@
 import Arrow from "../assets/arrow";
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import Github from "../assets/github";
-import {Project, Section} from "../pages/projects";
-import {Role} from "../pages/experience";
+import type {Project, Section} from "../pages/projects";
 import {goTo} from "../utils/propogation";
+import Image from "next/image";
 
 type ProjectCardProps = {
     props: Project,
@@ -26,24 +26,27 @@ const ProjectCard = ({props, expanded, setExpanded}: ProjectCardProps) => {
             <div className="flex flex-row justify-between content-between pl-6 p-4 gap-7">
                 <div className="grow flex flex-col">
                     <div className="flex flex-row items-center justify-between gap-3 pb-2">
-                        {props.thumb ? <img className="h-28 w-36" src={props.thumb}/> : null}
+                        {props.thumb && <Image className="h-28 w-36" src={props.thumb}
+                                               fill={true} alt={"./"}/>}
                         <div className="grow flex-none flex flex-col justify-center">
                             <h3 className="text-lg">{props.name}</h3>
                             <p className="flex-none">{props.description}</p>
                         </div>
                     </div>
-                    {(expanded && props.sections) ?
+                    {(expanded && props.sections) &&
                         <div className="flex flex-col text-sm gap-1 pt-3 gap-2">
                             {props.sections.map((section: Section) => {
                                 return (
                                     <div key={section.details} className="flex flex-row w-full">
-                                        {section.link ?
+                                        {section.link &&
                                             <button
                                                 className="h-6 w-6 mr-4 self-end self-center justify-self-center flex-none"
                                                 onClick={(e) => goTo(e, section.link)}>
                                                 <Github/>
-                                            </button> : null}
-                                        {section.image ? <img className="w-1/2 flex-none" src={section.image}/> : null}
+                                            </button>}
+                                        {section.image &&
+                                            <Image className="w-1/3 flex-none object-cover" src={section.image}
+                                                   fill={true} alt={"./"}/>}
                                         <div className="flex flex-col flex-grow p-2">
                                             {section.title ?
                                                 <>
@@ -54,7 +57,7 @@ const ProjectCard = ({props, expanded, setExpanded}: ProjectCardProps) => {
                                     </div>
                                 )
                             })}
-                        </div> : null}
+                        </div>}
                 </div>
                 <div
                     className="flex flex-col min-h-max justify-self-end justify-between justify-end contend-end content-between flex-none">

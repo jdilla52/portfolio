@@ -1,13 +1,11 @@
-
-
-const interpolateToSvg =(l: Array<Array<number>>, r: Array<Array<number>>, v = 0): string => {
+const interpolateToSvg = (l: Array<Array<number>>, r: Array<Array<number>>, v = 0): string => {
     if (l.length !== r.length || l.length < 1 || l[0]?.length !== 2 || r[0]?.length !== 2) {
         throw new Error("Lengths of arrays are not equal or invalid")
     }
 
     let result = "";
     for (let i = 0; i < l.length; i++) {
-        const vv = 1-v;
+        const vv = 1 - v;
         const ll: Array<number> | undefined = l[i];
         const rr: Array<number> | undefined = r[i];
 
@@ -29,7 +27,7 @@ const interpolateToSvg =(l: Array<Array<number>>, r: Array<Array<number>>, v = 0
 }
 
 const deriveExtents = (points: Array<Array<Array<number>>>, offsetX: number, offsetY: number): string => {
-    
+
     let minX = 0;
     let minY = 0;
     let maxX = 0;
@@ -39,7 +37,7 @@ const deriveExtents = (points: Array<Array<Array<number>>>, offsetX: number, off
         if (p === undefined) {
             throw new Error("Invalid array")
         }
-        for(let j = 0; j < p.length; j++) {
+        for (let j = 0; j < p.length; j++) {
             const pp = p[j];
             if (pp === undefined) {
                 throw new Error("Invalid array")
@@ -67,12 +65,13 @@ type ArrowProps = {
     t: number
 }
 const Arrow = ({t}: ArrowProps) => {
-    const pos0 = [[0,0], [20,0], [10,10]];
-    const pos1 = [[0,10], [20,10], [10,0]];
+    const pos0 = [[0, 0], [20, 0], [10, 10]];
+    const pos1 = [[0, 10], [20, 10], [10, 0]];
     const interp_points = interpolateToSvg(pos0, pos1, t);
     const extents = deriveExtents([pos0, pos1], 0, 0);
     return (
-        <svg width="100%" height="100%" viewBox={extents} fill="none" xmlns="http://www.w3.org/2000/svg" className="overflow-visible content-center">
+        <svg width="100%" height="100%" viewBox={extents} fill="none" xmlns="http://www.w3.org/2000/svg"
+             className="overflow-visible content-center">
             <polygon points={interp_points} className="stroke-2 stroke-stone-900 opacity-80 hover:opacity-100"/>
         </svg>
     )
