@@ -10,6 +10,7 @@ export type Project = {
     description: string,
     link: string | null,
     details: Array<string> | null,
+    image: string | null
 }
 
 export type Role = {
@@ -45,7 +46,7 @@ const Experience = () => {
         setExpanded({...init_state, [name]: !expanded[name]})
     }
     return (
-        <div className="relative fixed w-screen h-screen flex flex-row">
+        <div className="relative fixed w-screen h-screen flex flex-row bg-stone-100">
             <div className="overflow-auto w-screen" ref={outerRef}>
                 <div className="grow w-[calc(100%-theme(space.36))] flex flex-col items-center p-4
             text-stone-800 overflow-auto scrollbar">

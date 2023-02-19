@@ -39,16 +39,16 @@ todo:
   - [X] Update ray tracer assets
   - [ ] Add cli and visual to monte carlo
   - [ ] Add 3d section
-- [ ] add experience assets
-  - [ ] bitski images
-  - [ ] branch images
-  - [ ] adidas sr images
-  - [ ] adidas m images
-  - [ ] adidas jr images
-  - [ ] adidas contract images
-  - [ ] altair images
-  - [ ] khora images
-- [ ] redesign experience page for projects with images
+- [X] add experience assets
+  - [X] bitski images
+  - [X] branch images
+  - [X] adidas sr images
+  - [X] adidas m images
+  - [X] adidas jr images
+  - [X] adidas contract images
+  - [X] altair images
+  - [X] khora images
+- [X] redesign experience page for projects with images
 - [ ] add page based image viewer:
   - [ ] simple full page viewer transform images per page and create a slideshow viewer
   - [ ] add nice animations and css + cleanly display description, link back to project and outside sources
