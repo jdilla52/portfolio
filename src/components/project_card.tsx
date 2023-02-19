@@ -26,15 +26,16 @@ const ProjectCard = ({props, expanded, setExpanded}: ProjectCardProps) => {
             <div className="flex flex-row justify-between content-between pl-6 p-4 gap-7">
                 <div className="grow flex flex-col">
                     <div className="flex flex-row items-center justify-between gap-3 pb-2">
-                        {props.thumb && <Image className="h-28 w-36" src={props.thumb}
-                                               fill={true} alt={"./"}/>}
+                        {props.thumb && <div className="h-28 w-36 flex-none">
+                            <Image className="h-28 w-36 flex-none" src={props.thumb}
+                                   height={100} width={100} alt={"./"}/></div>}
                         <div className="grow flex-none flex flex-col justify-center">
                             <h3 className="text-lg">{props.name}</h3>
                             <p className="flex-none">{props.description}</p>
                         </div>
                     </div>
                     {(expanded && props.sections) &&
-                        <div className="flex flex-col text-sm gap-1 pt-3 gap-2">
+                        <div className="flex flex-col text-sm gap-1 pt-3 gap-4">
                             {props.sections.map((section: Section) => {
                                 return (
                                     <div key={section.details} className="flex flex-row w-full">
@@ -44,9 +45,9 @@ const ProjectCard = ({props, expanded, setExpanded}: ProjectCardProps) => {
                                                 onClick={(e) => goTo(e, section.link)}>
                                                 <Github/>
                                             </button>}
-                                        {section.image &&
-                                            <Image className="w-1/3 flex-none object-cover" src={section.image}
-                                                   fill={true} alt={"./"}/>}
+                                        {section.image ?
+                                            <Image className="w-1/2 flex-none" src={section.image}
+                                                   width={400} height={400} alt={"./"}/> : null}
                                         <div className="flex flex-col flex-grow p-2">
                                             {section.title ?
                                                 <>

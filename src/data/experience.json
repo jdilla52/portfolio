@@ -92,10 +92,9 @@
           "name": "Design Engine",
           "description": "A tool for architects to design and evaluate 3d printed facades.",
           "details": [
-            "Abstracted a licensed Wasm based 3d scene (Hoops) to create a highly interactive 3d tool using React typescript.",
+            "Abstracted a licensed Wasm based 3d scene (Hoops) to create an interactive 3d tool using React.",
             "Developed a highly parallel serverless architecture using step-functions and Kinesis.",
-            "Experience with modern abstracted IAC using Terraform and aws-cdk to deliver a large and complex application.",
-            "Utilized the c++ aws sdk and the Parasolid Kernel to deliver low latency and minimal bundle size serverless functions."
+            "Utilized the c++ aws sdk and the Parasolid Kernel to deliver low latency serverless functions."
           ],
           "image": "/branch1.png"
         },
