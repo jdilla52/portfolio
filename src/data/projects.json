@@ -19,8 +19,8 @@
       "thumb": "cache_clouds1.png",
       "sections": [
         {
-          "details": "The site was a fun project I made for some friends. We didn't end launching however there were a number of entertaining aspects to the site.",
-          "image": "/cache_clouds3.png"
+          "details": "A side project with some friends. We didn't end launching however there were a number of entertaining aspects to the site.",
+          "image": "/cache_clouds4.png"
         },
         {
           "details": "We went ham with lottie files and other svg animations to try and  create a 8bit feel to the site.",
@@ -41,6 +41,22 @@
       ]
     },
     {
+      "name": "Web3 Graph",
+      "link": "https://github.com/jdilla52/nft-indexer/tree/graph",
+      "description": "Experiment representing relationships in web3 with a graphdb.",
+      "thumb": "web3_indexer1.png",
+      "sections": [
+        {
+          "details": "The core idea is to represent wallets and transactions between them.",
+            "image": "/web3_indexer2.png"
+        },
+        {
+          "details": "Also explored was mapping the relationships between contract and wallets via social (twitter) interactions and transactions.",
+          "image": "/web3_indexer3.png"
+        }
+      ]
+    },
+    {
       "name": "Web3 Search",
       "link": "https://github.com/jdilla52/web3-search",
       "description": "Weighted binary search for identifying the creation block of a web3 contract.",
@@ -56,22 +72,6 @@
         {
           "title": "Future Work",
           "details": "Our use case was to minimize the cost, however future work will go into moving it to a weighted ternary search and explore the cost to speed trade off leveraging parallelism."
-        }
-      ]
-    },
-    {
-      "name": "Web3 Graph",
-      "link": "https://github.com/jdilla52/nft-indexer/tree/graph",
-      "description": "Experiment representing relationships in web3 with a graphdb.",
-      "thumb": "web3_indexer1.png",
-      "sections": [
-        {
-          "details": "The core idea is to represent wallets and transactions between them.",
-            "image": "/web3_indexer2.png"
-        },
-        {
-          "details": "Also explored was mapping the relationships between contract and wallets via social (twitter) interactions and transactions.",
-          "image": "/web3_indexer3.png"
         }
       ]
     },
