@@ -11,7 +11,7 @@ const MyApp: AppType = ({Component, pageProps}) => {
 
     return (
         <>
-            <Scene className='pointer-events-none'/>
+            {/*<Scene className='pointer-events-none'/>*/}
             <Component {...pageProps} >
             </Component>
         </>

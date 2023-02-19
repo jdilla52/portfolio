@@ -9,7 +9,6 @@ export type Section = {
     title: string | null,
     details: string,
     image: string | null,
-
     link: string | null,
 
 }
@@ -17,10 +16,8 @@ export type Section = {
 export type Project = {
     name: string,
     description: string,
-
     link: string | null,
     thumb: string | null,
-
     sections: Array<Section> | null,
 }
 

@@ -29,8 +29,42 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 
 
 todo:
-- [ ] add background shader:
-    - [ ] use this rgb https://redpixelthemes.com/blog/tailwindcss-colors-different-formats/#color-Stone
-    - [ ] decide on perlin or gaussian, maybe let folks choose. could do flocking, gol or reaction diffusion as well.
-- [ ] add project assets 
+2/19
+- [ ] add project assets
+  - [X] Create visuals
+  - [ ] Capture new screenshot of bevy chess
+  - [ ] Create visual for web3 graph
+  - [ ] Cache clouds animation of some sort
+  - [ ] Get gif of cache clouds
+  - [ ] Update ray tracer assets
+  - [ ] Add cli and visual to monte carlo
+  - [ ] Add 3d section
 - [ ] add experience assets
+  - [ ] bitski images
+  - [ ] branch images
+  - [ ] adidas sr images
+  - [ ] adidas m images
+  - [ ] adidas jr images
+  - [ ] adidas contract images
+  - [ ] altair images
+  - [ ] khora images
+- [ ] add page based image viewer:
+  - [ ] simple full page viewer transform images per page and create a slideshow viewer
+  - [ ] add nice animations and css + cleanly display description, link back to project and outside sources
+2/20
+- [ ] add div animation and effects
+- [ ] redesign projects page
+- [ ] cleanup repo
+
+Other:
+- [ ] move assets to backend
+  - [ ] move images to s3
+  - [ ] add content db + orm
+  - [ ] use next or setup lambdas
+- [ ] add skill page
+  - Would be cool as a springs graph or something
+- [ ] add generative background shader:
+  - [X] add three and base shader
+  - [ ] add shader toolset
+  - [ ] decide on perlin or gaussian, maybe let folks choose. could do flocking, gol or reaction diffusion as well.
+  - [ ] create shader ui to cycle through and change params
