@@ -6,3 +6,8 @@ export const goTo = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, lin
     if (link)
         window.open(link, "_blank");
 }
+
+export const onClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, fn: ()=>void) => {
+    event.stopPropagation();
+    fn();
+}

@@ -37,19 +37,18 @@
           "name": "Metadata",
           "description": "Api for contract and token metadata",
           "details": [
-            "Resolved third party data quality issues by indexing large quantity of token metadata from the past several years",
+            "Indexed a large quantity of token metadata from the past several years",
             "Setup pipeline to update metadata based on opesea streams",
-            "Built a heurstic and multi-stage pipeline to enrich contract metadata pulling results from a large number of third party sources as well as on-chain."
+            "Built a heurstic and multi-stage pipeline to enrich contract metadata pulling results from multiple sources."
           ]
         },
         {
           "name": "Activity",
           "description": "Collaborated to deliver a new activity feed and notifications of users on chain actions.",
           "details": [
-            "Wrote custom Rust urdfs for spark allowing consolidated high performance message decoding and modeling.",
-            "Replaced a spark pipeline with custom rust resulting in an order of magnitude improvement in end to end performance.",
-            "Reduced the cost of third party api’s by half and greatly reduces pipeline complexity and footprint.",
-            "Migrated from msk to confluent kafka and from on prem cockroach to cloud"
+            "Wrote custom Rust urdfs for spark allowing consolidated message decoding.",
+            "Replaced a spark pipelines with custom rust consumers resulting in an order of magnitude improvement in speed.",
+            "Reduced the cost of third party api’s by half and greatly reduced complexity."
           ],
           "link": "https://twitter.com/bitski/status/1610350412187697153",
           "image": "/bitski3.png"
@@ -105,18 +104,17 @@
           "description": "Developed 2 mvp applications for controlling robotic motion.",
           "details": [
             "Used React + three.js. to deliver a realtime web client for the evaluation robotic motion.",
-            "Developed a simulation platform Using websockets + message bundling to synchronize webgl client with a Ros based c++ & python backend."
+            "Developed a simulation platform Using websockets + message bundling to synchronize webgl client with a Ros c++ & python backend."
           ],
-          "image": "/branch2.png"
+          "image": "/branch2.jpg"
         },
         {
           "name": "IIOT",
           "description": "Implemented a popular industry design as an end to end solution for data collection, aggregation and insight creation.",
           "details": [
-            "Started and managed Eks cluster using standard tools - terraform, helm, kubectl.",
             "Designed and collaborated on a highly available architecture based on UNS (unified namespace).",
-            "Built and managed a number of tool to support UNS such as RabbitMq, InfluxDb and scalable Rust transforms.",
-            "Using Rust built a high velocity SparkplugB compliant Tcp - Mqtt server for low latency transmission of device state."
+            "Built and managed a number of tool to support UNS such as RabbitMq, InfluxDb and Rust consumers.",
+            "Built a high velocity SparkplugB compliant Tcp - Mqtt server in Rust."
           ]
         }
       ]
@@ -162,22 +160,19 @@
           "name": "4d Creator",
           "description": "Delivered a fullstack application for lattice generation.",
           "details": [
-            "Developed a long running job api using the Kubernetes client sdk in Nodejs.",
-            "Contributed to numerous Kafka services c++, python, Nodejs.",
+            "Developed a long running job api using the Kubernetes sdk & Nodejs.",
+            "Contributed to Kafka services c++, python, Nodejs.",
             "Developed Jenkins pipelines for unique and varied build scenarios per service.",
-            "Married official adidas React UI libraries with three.js to deliver highly interactive solutions.",
-            "Ported the project from Redux to Redux toolkit to modernize the handling of long running asynchronous state.",
-            "Collaborated with a team of mathematicians to develop novel mesh-less approach to lattice rendering using sdfs"
+            "Married official adidas React UI libraries with three.js."
           ]
         },
         {
           "name": "Engineering Platform",
           "description": "Developed novel novel engineering approaches.",
           "details": [
-            "Multi-scale modeling: Dramatically reduced optimization time by creating a method for generating material models.",
-            "Periodic meshing: Developed method for generating periodic surface meshes from arbitrary lattices using python and c++.",
-            "Curve fitting: Implemented a method for curve fitting and fea interpolation of material models.",
-            "Results Database: Scaled a large database of fea results and material models for optimization."
+            "Dramatically reduced optimization time through multi scale modeling.",
+            "Developed method for generating periodic surface meshes from arbitrary lattices using python and c++.",
+            "Implemented a method for curve fitting and fea interpolation of material models."
           ],
           "image": "/adidas_sr1.gif",
           "link": "https://3dprint.com/281055/new-adidas-4dfwd-3d-printed-midsoles-bounce-runners-forward/"
@@ -202,7 +197,7 @@
             "Ported and improved a legacy C# library for 3D operations.",
             "Developed initial react + three.js frontend for lattice generation."
           ],
-          "image": "/adidas_m1.png"
+          "image": "/adidas_m1.jpeg"
         },
         {
           "name": "Strung",
@@ -240,7 +235,7 @@
           "name": "Forged",
           "description": "Contributed to a project for a molded shoe.",
           "details": [
-            "Developed computational patterns for a shoe upper."
+            "Developed computational patterns for a shoe molds."
           ],
           "link": "https://www.fastcompany.com/90584410/adidass-latest-shoe-wasnt-sewn-together-it-was-forged-like-metal",
           "image": "/adidas_jr2.png"
