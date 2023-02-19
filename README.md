@@ -32,11 +32,11 @@ todo:
 2/19
 - [ ] add project assets
   - [X] Create visuals
-  - [ ] Capture new screenshot of bevy chess
-  - [ ] Create visual for web3 graph
-  - [ ] Cache clouds animation of some sort
-  - [ ] Get gif of cache clouds
-  - [ ] Update ray tracer assets
+  - [X] Capture new screenshot of bevy chess
+  - [X] Create visual for web3 graph
+  - [X] Cache clouds animation of some sort
+  - [X] Get gif of cache clouds
+  - [X] Update ray tracer assets
   - [ ] Add cli and visual to monte carlo
   - [ ] Add 3d section
 - [ ] add experience assets
@@ -48,13 +48,16 @@ todo:
   - [ ] adidas contract images
   - [ ] altair images
   - [ ] khora images
+- [ ] redesign experience page for projects with images
 - [ ] add page based image viewer:
   - [ ] simple full page viewer transform images per page and create a slideshow viewer
   - [ ] add nice animations and css + cleanly display description, link back to project and outside sources
+
 2/20
 - [ ] add div animation and effects
 - [ ] redesign projects page
 - [ ] cleanup repo
+- [ ] add mobile styling and redesign where needed
 
 Other:
 - [ ] move assets to backend

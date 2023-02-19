@@ -2,10 +2,14 @@
   "roles": [
     {
       "company": "Bitksi",
-      "date": ["2022", "2023"],
+      "date": [
+        "2022",
+        "2023"
+      ],
       "role": "Senior Software Engineer",
       "image": "/bitski.svg",
       "headline": "Solved core data issues and scalability challenges while delivering on core features in Rust.",
+      "link": "https://www.bitski.com/",
       "projects": [
         {
           "name": "Floor prices & alerts",
@@ -14,7 +18,9 @@
             "Established an internal api and store for all floor prices for a given contract.",
             "Used polling and kafka to keep internal data stores up to date.",
             "Setup pipeline to check user alerts and send notifications."
-          ]
+          ],
+          "link": "https://twitter.com/bitski/status/1611467053176860672?cxt=HHwWgMDR_eavit0sAAAA",
+          "image": "/bitski1.png"
         },
         {
           "name": "Bids & offers",
@@ -23,13 +29,15 @@
             "Leveraged websockets for consuming large quantities of off chain chain events moving them to kafka.",
             "Enriched events with contract and token metadata.",
             "Established loose heuristic for filtering spam and low ball offers."
-          ]
+          ],
+          "link": "https://twitter.com/bitski/status/1582801274130419712",
+          "image": "/bitski2.png"
         },
         {
-          "name": "Contract metadata",
+          "name": "Metadata",
           "description": "Api for contract and token metadata",
           "details": [
-            "Indexed large quantity of token metadata from the past several years",
+            "Resolved third party data quality issues by indexing large quantity of token metadata from the past several years",
             "Setup pipeline to update metadata based on opesea streams",
             "Built a heurstic and multi-stage pipeline to enrich contract metadata pulling results from a large number of third party sources as well as on-chain."
           ]
@@ -42,23 +50,44 @@
             "Replaced a spark pipeline with custom rust resulting in an order of magnitude improvement in end to end performance.",
             "Reduced the cost of third party api’s by half and greatly reduces pipeline complexity and footprint.",
             "Migrated from msk to confluent kafka and from on prem cockroach to cloud"
-          ]
+          ],
+          "link": "https://twitter.com/bitski/status/1610350412187697153",
+          "image": "/bitski3.png"
         }
       ]
     },
     {
       "company": "Metafold",
-      "date": ["2022", "2023"],
+      "date": [
+        "2022",
+        "present"
+      ],
       "role": "Advisor",
       "image": "/metafold2.svg",
-      "headline": "An incredible startup focused on reducing the barrier to entry for lattice generation in 3D printing through a realtime web interface."
+      "headline": "A startup focused on reducing the barrier to entry for lattice generation in 3D printing through a realtime web interface.",
+      "link": "https://www.metafold3d.com/"
+    },
+    {
+      "company": "Madeium",
+      "date": [
+        "2021",
+        "present"
+      ],
+      "role": "Advisor",
+      "image": "/madeium-logo.png",
+      "headline": "A startup behind a web3 centric - creator platform.",
+      "link": "https://www.madeium.com/"
     },
     {
       "company": "Branch",
-      "date": ["2021", "2022"],
+      "date": [
+        "2021",
+        "2022"
+      ],
       "role": "Senior Software Engineer",
       "image": "/branch.svg",
       "headline": "Owned cloud adoption while leading a small team focused on 3d printing in construction. A wide range of responsibility from client facing frontend to iiot data aggregation and robotics.",
+      "link": "https://branchtechnology.com/",
       "projects": [
         {
           "name": "Design Engine",
@@ -68,7 +97,8 @@
             "Developed a highly parallel serverless architecture using step-functions and Kinesis.",
             "Experience with modern abstracted IAC using Terraform and aws-cdk to deliver a large and complex application.",
             "Utilized the c++ aws sdk and the Parasolid Kernel to deliver low latency and minimal bundle size serverless functions."
-          ]
+          ],
+          "image": "/branch1.png"
         },
         {
           "name": "Ros",
@@ -76,7 +106,8 @@
           "details": [
             "Used React + three.js. to deliver a realtime web client for the evaluation robotic motion.",
             "Developed a simulation platform Using websockets + message bundling to synchronize webgl client with a Ros based c++ & python backend."
-          ]
+          ],
+          "image": "/branch2.png"
         },
         {
           "name": "IIOT",
@@ -92,7 +123,10 @@
     },
     {
       "company": "Adidas",
-      "date": ["2018", "2021"],
+      "date": [
+        "2018",
+        "2021"
+      ],
       "role": "Senior Digital Creator",
       "image": "/adidas.svg",
       "headline": "Lead a team of three team members, as well as a 750k consulting budget. Drove development of theoretical manufacturing techniques resulting in computer graphics centric fullstack applications.",
@@ -102,15 +136,27 @@
           "description": "Developed a concept for multi-cell lattice.",
           "details": [
             "Using data science techniques explored and simulated a large domain of lattices.",
-            "Multiscale modeling: Dramatically reduced optimization time by creating a method for generating material models, including interpolation, n-dimenstional searching and custom curve fitting.",
-            "Periodic meshing: Developed method for generating periodic surface meshes from arbitrary lattices using python."
-          ]
+            "Collaborated with Carbon to inform development of print-abiltiy estimation and improvements."
+          ],
+          "link": "https://www.youtube.com/watch?v=dodn5_X_S5A",
+          "image": "/adidas_sr2.gif"
         },
         {
           "name": "4d Cush",
           "description": "Managed and contributed to development of lifestyle 3d printed components.",
           "details": [
-          ]
+            "Collaborated with inline footwear designers to deliver a 3d printed heel component.",
+            "Focused on improvements to print-ability and manufacturability."
+          ],
+          "image": "/adidas_sr4.png"
+        },
+        {
+          "name": "4d Kick",
+          "description": "Managed and contributed to development of lifestyle 3d printed components.",
+          "details": [
+            "Collaborated with inline running designers to deliver a 3d printed heel component."
+          ],
+          "image": "/adidas_sr5.png"
         },
         {
           "name": "4d Creator",
@@ -119,15 +165,31 @@
             "Developed a long running job api using the Kubernetes client sdk in Nodejs.",
             "Contributed to numerous Kafka services c++, python, Nodejs.",
             "Developed Jenkins pipelines for unique and varied build scenarios per service.",
-            "Married official adidas React UI libraries with a 3d scene to deliver highly interactive solutions.",
-            "Ported the project from Redux to Redux toolkit to modernize the handling of long running asynchronous state."
+            "Married official adidas React UI libraries with three.js to deliver highly interactive solutions.",
+            "Ported the project from Redux to Redux toolkit to modernize the handling of long running asynchronous state.",
+            "Collaborated with a team of mathematicians to develop novel mesh-less approach to lattice rendering using sdfs"
           ]
+        },
+        {
+          "name": "Engineering Platform",
+          "description": "Developed novel novel engineering approaches.",
+          "details": [
+            "Multi-scale modeling: Dramatically reduced optimization time by creating a method for generating material models.",
+            "Periodic meshing: Developed method for generating periodic surface meshes from arbitrary lattices using python and c++.",
+            "Curve fitting: Implemented a method for curve fitting and fea interpolation of material models.",
+            "Results Database: Scaled a large database of fea results and material models for optimization."
+          ],
+          "image": "/adidas_sr1.gif",
+          "link": "https://3dprint.com/281055/new-adidas-4dfwd-3d-printed-midsoles-bounce-runners-forward/"
         }
       ]
     },
     {
       "company": "Adidas",
-      "date": ["2016", "2018"],
+      "date": [
+        "2016",
+        "2018"
+      ],
       "role": "Manager Digital Creator",
       "image": "/adidas.svg",
       "headline": "Drove digital fabrication methods in adidas r&d. Focused on software development for 4d",
@@ -139,7 +201,8 @@
             "Responsible for backend Python services to perform 3D operations.",
             "Ported and improved a legacy C# library for 3D operations.",
             "Developed initial react + three.js frontend for lattice generation."
-          ]
+          ],
+          "image": "/adidas_m1.png"
         },
         {
           "name": "Strung",
@@ -147,13 +210,17 @@
           "details": [
             "Co-opted a cnc and created an prototype method to wind tpu filament around an armature",
             "Collaborated to develop a three.js application to design textiles using a greedy algorithm."
-          ]
+          ],
+          "image": "/adidas_m2.png"
         }
       ]
     },
     {
       "company": "Adidas",
-      "date": ["2015", "2018"],
+      "date": [
+        "2015",
+        "2018"
+      ],
       "role": "Junior Digital Creator",
       "image": "/adidas.svg",
       "headline": "Delivered a mass produced 3d printed product called 4d, while delivering a range of other projects.",
@@ -165,41 +232,51 @@
             "Developed a python library for 3d operations.",
             "Developed a C# library and application for 3d operations.",
             "Developed a hex meshing approach for 3d printing."
-          ]
+          ],
+          "link": "https://www.complex.com/sneakers/2020/01/adidas-4d-deep-dive",
+          "image": "/adidas_jr1.png"
         },
         {
           "name": "Forged",
           "description": "Contributed to a project for a molded shoe.",
           "details": [
             "Developed computational patterns for a shoe upper."
-          ]
+          ],
+          "link": "https://www.fastcompany.com/90584410/adidass-latest-shoe-wasnt-sewn-together-it-was-forged-like-metal",
+          "image": "/adidas_jr2.png"
         }
       ]
     },
     {
       "company": "Adidas",
-      "date": ["2014"],
+      "date": [
+        "2014"
+      ],
       "role": "Contractor",
       "image": "/adidas.svg",
       "headline": "Extended from initial 3 contract to 1 year. Moved some of their development process to 3D and to explore generative tools.",
       "projects": [
         {
-          "name": "Harden reaction diffusion",
+          "name": "Reaction Diffusion Outsole",
           "description": "Developed an interface for designers to explore reaction diffusion.",
           "details": [
             "Developed reaction-diffusion based outsole tool in Process.js.",
             "Exposed myself to shader creation using Modo.",
             "Used grasshopper to process scan data for computational design."
-          ]
+          ],
+          "image": "/adidas_con1.jpg"
         }
       ]
     },
     {
       "company": "Altair",
-      "date": ["2014"],
+      "date": [
+        "2014"
+      ],
       "role": "Intern",
       "image": "/altair.svg",
-      "headline": "Using Altair’s background in simulation and optimization software, collaborated with engineers to go about designing a running blade and prosthetic system for paralympian, Blake Leaper.",
+      "headline": "Leveraging Altair’s background in optimization software, I collaborated with engineers to go about reimagining the running blade for paralympian, Blake Leaper.",
+      "link": "https://altair.com/",
       "projects": [
         {
           "name": "Blade",
@@ -208,15 +285,30 @@
             "Developed a blade for a paralympian.",
             "Exposed to inspire and hyper works optimization software Inspire and Optistruct.",
             "Leveraged rhino and grasshopper for blade design."
-          ]
+          ],
+          "link": "https://www.fastcompany.com/3034308/these-reinvented-running-blades-could-let-more-paralympians-into-the-olympics#11",
+          "image": "/altair1.png"
         }
       ]
     },
     {
       "company": "Khora",
-      "date": ["2012", "2013"],
+      "date": [
+        "2012",
+        "2013"
+      ],
       "role": "Founder",
-      "headline": "Khora was a startup which was founded with the idea of enabling mass customization of home goods through the use of 3d web based interfaces and digital fabrication."
+      "headline": "Khora was a startup which was founded with the idea of enabling mass customization of home goods through the use of 3d web based interfaces and digital fabrication.",
+      "projects": [
+        {
+          "name": "Khora Image",
+          "description": "Developed an interface customization of art pieces.",
+          "details": [
+            "A three.js app for customizing look and feel of piece."
+          ],
+          "image": "/khora1.png"
+        }
+      ]
     }
   ]
 }

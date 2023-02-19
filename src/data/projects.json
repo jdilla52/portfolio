@@ -4,7 +4,7 @@
       "name": "Ray Tracer",
       "link": "https://github.com/jdilla52/ray-tracer",
       "description": "A 3d ray tracer written in rust.",
-      "thumb": "ray_tracer1.png",
+      "thumb": "ray_tracer2.png",
       "sections": [
         {
           "details": "An implementation of Ray Tracing In One Weekend, The Next Week, and portions of The Rest of Your Life by Peter Shirley. https://raytracing.github.io/books/RayTracingInOneWeekend.html",
@@ -62,7 +62,18 @@
     {
       "name": "Web3 Graph",
       "link": "https://github.com/jdilla52/nft-indexer/tree/graph",
-      "description": "Experiment representing relationships in web3 with a graphdb."
+      "description": "Experiment representing relationships in web3 with a graphdb.",
+      "thumb": "web3_indexer1.png",
+      "sections": [
+        {
+          "details": "The core idea is to represent wallets and transactions between them.",
+            "image": "/web3_indexer2.png"
+        },
+        {
+          "details": "Also explored was mapping the relationships between contract and wallets via social (twitter) interactions and transactions.",
+          "image": "/web3_indexer3.png"
+        }
+      ]
     },
     {
       "name": "Monte Carlo Example",
