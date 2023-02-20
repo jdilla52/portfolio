@@ -70,7 +70,7 @@ const Arrow = ({t}: ArrowProps) => {
     const interp_points = interpolateToSvg(pos0, pos1, t);
     const extents = deriveExtents([pos0, pos1], 0, 0);
     return (
-        <svg width="100%" height="100%" viewBox={extents} fill="none" xmlns="http://www.w3.org/2000/svg"
+        <svg width="95%" height="95%" viewBox={extents} fill="none" xmlns="http://www.w3.org/2000/svg"
              className="overflow-visible content-center">
             <polygon points={interp_points} className="stroke-2 stroke-stone-900 opacity-80 hover:opacity-100"/>
         </svg>

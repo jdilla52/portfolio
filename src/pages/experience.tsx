@@ -47,7 +47,7 @@ const Experience = () => {
     }
     return (
         <div className="relative fixed w-screen h-screen flex md:flex-row sm:flex-col bg-stone-100">
-            <div className="overflow-y-auto w-screen mb-16 md:mb-0" ref={outerRef}>
+            <div className="overflow-y-auto w-screen pb-16 md:mb-0" ref={outerRef}>
                 <div className="grow sm:w-full md:w-[calc(100%-theme(space.36))] flex flex-col items-center p-4
             text-stone-800">
                     {experienceData.roles.map((role: Role) => {
@@ -64,7 +64,7 @@ const Experience = () => {
                             <Logo/>
                         </Link>
                     </div>
-                    <div className="w-8 md:w-10 h-8 mr-8 m-2">
+                    <div className="overflow-visible w-8 md:w-10 h-8 mr-8 m-2">
                         <ScrollableArrow outerRef={getRef}/>
                     </div>
                 </div>

@@ -23,55 +23,51 @@ const ProjectCard = ({props, expanded, setExpanded}: ProjectCardProps) => {
     return (
         <div className="w-full border-2 border-stone-800 font-cairo"
              onClick={() => setExpanded()} ref={ref}>
-            <div className="flex flex-row justify-between content-between pl-6 p-4 gap-7">
-                <div className="grow flex flex-col">
-                    <div className="flex flex-row items-center gap-3 pb-2">
+            <div className="flex flex-col pl-6 p-4">
+                    <div className="grow flex flex-row w-full justify-between items-center gap-3">
                         {props.thumb && <div className="h-28 w-36 flex-none">
                             <Image className="h-28 w-36 flex-none" src={props.thumb}
                                    height={100} width={100} alt={"./"}/></div>}
-                        <div className="flex flex-col justify-center">
+                        <div className="grow w-full">
                             <h3 className="text-lg">{props.name}</h3>
                             <p className="max-w-prose">{props.description}</p>
                         </div>
-                    </div>
-                    {(expanded && props.sections) &&
-                        <div className="flex flex-col text-sm gap-1 pt-3 gap-4">
-                            {props.sections.map((section: Section) => {
-                                return (
-                                    <div key={section.details}
-                                         className={`flex ${section.image ? "flex-col" : "flex-row"} md:flex-row w-full`}>
-                                        {section.link &&
-                                            <button
-                                                className="h-6 w-6 m-4 self-end self-center justify-self-center flex-none"
-                                                onClick={(e) => goTo(e, section.link)}>
-                                                <Github/>
-                                            </button>}
-                                        {section.image ?
-                                            <Image className="w-full md:w-56 flex-none" src={section.image}
-                                                   width={400} height={400} alt={"./"}/> : null}
-                                        <div className="flex flex-col flex-grow p-2">
-                                            {section.title ?
-                                                <>
-                                                    <h4 className="flex-none">{section.title.toUpperCase()}</h4>
-                                                    <p className="">{section.details}</p>
-                                                </> : <p className="md:p-8">{section.details}</p>}
-                                        </div>
-                                    </div>
-                                )
-                            })}
-                        </div>}
-                </div>
-                <div
-                    className="flex flex-col min-h-max justify-self-end justify-between justify-end contend-end content-between flex-none">
-                    {props.link ?
-                        <button className="h-7"
+                    {props.link &&
+                        <button className="flex-none h-7 self-start"
                                 onClick={(e) => goTo(e, props.link)}>
                             <Github/>
-                        </button> : null}
-                    {props.sections ? <div className="h-3 self-end justify-self-end">
-                        <Arrow t={expanded ? 1.0 : 0.0}/>
-                    </div> : null}
+                        </button>}
                 </div>
+                {(expanded && props.sections) &&
+                    <div className="flex flex-col text-sm gap-1 pt-3 gap-4">
+                        {props.sections.map((section: Section) => {
+                            return (
+                                <div key={section.details}
+                                     className={`flex ${section.image ? "flex-col" : "flex-row"} md:flex-row w-full`}>
+                                    {section.link &&
+                                        <button
+                                            className="h-6 w-6 m-4 self-end self-center justify-self-center flex-none"
+                                            onClick={(e) => goTo(e, section.link)}>
+                                            <Github/>
+                                        </button>}
+                                    {section.image ?
+                                        <Image className="w-full md:w-56 flex-none" src={section.image}
+                                               width={400} height={400} alt={"./"}/> : null}
+                                    <div className="flex flex-col flex-grow p-2">
+                                        {section.title ?
+                                            <>
+                                                <h4 className="flex-none">{section.title.toUpperCase()}</h4>
+                                                <p className="">{section.details}</p>
+                                            </> : <p className="md:p-8">{section.details}</p>}
+                                    </div>
+                                </div>
+                            )
+                        })}
+                    </div>}
+                {props.sections &&
+                    <div className="shrink flex-none self-end justify-self-end h-2.5 mt-2">
+                        <Arrow t={expanded ? 1.0 : 0.0}/>
+                    </div>}
             </div>
         </div>
 
