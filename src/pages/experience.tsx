@@ -46,10 +46,10 @@ const Experience = () => {
         setExpanded({...init_state, [name]: !expanded[name]})
     }
     return (
-        <div className="relative fixed w-screen h-screen flex flex-row bg-stone-100">
-            <div className="overflow-auto w-screen" ref={outerRef}>
-                <div className="grow w-[calc(100%-theme(space.36))] flex flex-col items-center p-4
-            text-stone-800 overflow-auto scrollbar">
+        <div className="relative fixed w-screen h-screen flex md:flex-row sm:flex-col bg-stone-100">
+            <div className="overflow-y-auto w-screen mb-16 md:mb-0" ref={outerRef}>
+                <div className="grow sm:w-full md:w-[calc(100%-theme(space.36))] flex flex-col items-center p-4
+            text-stone-800">
                     {experienceData.roles.map((role: Role) => {
                         return (
                             <ExperienceCard key={role.headline} props={role} expanded={expanded[getRoleKey(role)]}
@@ -57,15 +57,19 @@ const Experience = () => {
                         )
                     })}
                 </div>
-            </div>
-            <div className="fixed flex flex-col right-5 h-screen w-36 p-6 justify-between">
-                <div className="flex-col items-center">
-                    <Link href="/">
-                        <Logo/>
-                    </Link>
+                <div
+                    className="fixed flex md:flex-col bottom-0 left-0 right-0 md:right-0 md:left-[calc(100%-theme(space.36))] md:top-0 items-end md:items-center justify-between">
+                    <div className="w-10 md:w-24 h-10 md:h-24 m-4 md:mr-12">
+                        <Link href="/">
+                            <Logo/>
+                        </Link>
+                    </div>
+                    <div className="w-8 md:w-10 h-8 mr-8 m-2">
+                        <ScrollableArrow outerRef={getRef}/>
+                    </div>
                 </div>
-                <ScrollableArrow outerRef={getRef}/>
             </div>
+
         </div>
     )
 }

@@ -15,9 +15,9 @@
           "name": "Floor prices & alerts",
           "description": "A feature to alert users when their assets changed price and internal api for floor prices.",
           "details": [
-            "Established an internal api and store for all floor prices for a given contract.",
+            "Established an internal api and stored for all floor prices for given chains.",
             "Used polling and kafka to keep internal data stores up to date.",
-            "Setup pipeline to check user alerts and send notifications."
+            "Setup pipelines to check user alerts and send notifications."
           ],
           "link": "https://twitter.com/bitski/status/1611467053176860672?cxt=HHwWgMDR_eavit0sAAAA",
           "image": "/bitski1.png"

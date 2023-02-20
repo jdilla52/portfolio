@@ -9,7 +9,7 @@ const Home: NextPage = () => {
     return (
         <>
             <main className="fixed w-screen h-screen flex flex-col items-center justify-center
-            font-sans font-normal leading-relaxed text-stone-800 body-font font-cairo">
+            font-sans font-normal leading-relaxed text-stone-800 bg-stone-100 body-font font-cairo">
                 <div className="w-48 p-6">
                     <Logo/>
                 </div>

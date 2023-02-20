@@ -38,7 +38,7 @@ const ScrollableArrow = (props: ScrollableArrowProps) => {
     }, [props])
 
     return (
-        <button className="h-4 w-full overflow-visible" onClick={() => scrollToTop()}>
+        <button className="overflow-visible" onClick={() => scrollToTop()}>
             <Arrow t={scroll}/>
         </button>
     )

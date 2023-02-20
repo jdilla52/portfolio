@@ -20,20 +20,20 @@ const ExperienceCard = ({props, expanded, setExpanded}: ExperienceCardProps) => 
     // todo add collapse on move out of screen
     // todo add animation for expand
     return (
-        <div className="flex flex-row font-cairo" ref={ref}>
+        <div className="flex flex-col md:flex-row font-cairo" ref={ref}>
             {/*{expanded ? <>*/}
-            {!expanded && <div className="flex flex-row w-36 border-r-2 border-stone-800 items-center justify-end">
+            {!expanded && <div className="flex flex-row md:w-36 border-r-2 border-stone-800 items-center justify-end">
                 <div className="pr-6">
                     {props.date.length === 1 && <p className="">{props.date[0]}</p>}
                     {props.date.length === 2 && <p className="">{props.date[0]} - {props.date[1]}</p>}
                 </div>
             </div>}
             <div
-                className={`flex flex-row grow justify-between border-2 border-stone-800 ${expanded ? "w-full" : "w-96"} p-4 ml-16 my-4`}
+                className={`flex flex-row grow justify-between border-2 border-stone-800 ${expanded ? "w-full" : "md:w-96"} p-4 md:ml-16 my-4`}
                 onClick={() => props.projects ? setExpanded() : () => null}>
 
-                <div className="shrink flex flex-col items-left justify-center">
-                    <button className="flex flex-row items-center gap-3 pb-1 hover:underline"
+                <div className="shrink flex flex-col items-center justify-center">
+                    <button className="flex flex-row items-center w-full gap-3 pb-1 hover:underline"
                             onClick={(e) => goTo(e, props.link)}>
                         {props.image ?
                             <div className="h-8 w-8"><Image height={90} width={90} src={props.image} alt={"./"}/>

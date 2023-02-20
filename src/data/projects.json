@@ -32,7 +32,7 @@
       "name": "Bevy Test",
       "link": "https://github.com/jdilla52/bevy_test",
       "description": "A simple bevy chess game.",
-      "thumb": "/bevy_test1.png",
+      "thumb": "/bevy_test2.png",
       "sections": [
         {
           "details": "A simple chess game written in rust using the bevy game engine. It's based on an excellent but old introduction to Bevy. The game is a work in progress and is not yet complete.",

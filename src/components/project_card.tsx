@@ -25,35 +25,36 @@ const ProjectCard = ({props, expanded, setExpanded}: ProjectCardProps) => {
              onClick={() => setExpanded()} ref={ref}>
             <div className="flex flex-row justify-between content-between pl-6 p-4 gap-7">
                 <div className="grow flex flex-col">
-                    <div className="flex flex-row items-center justify-between gap-3 pb-2">
+                    <div className="flex flex-row items-center gap-3 pb-2">
                         {props.thumb && <div className="h-28 w-36 flex-none">
                             <Image className="h-28 w-36 flex-none" src={props.thumb}
                                    height={100} width={100} alt={"./"}/></div>}
-                        <div className="grow flex-none flex flex-col justify-center">
+                        <div className="flex flex-col justify-center">
                             <h3 className="text-lg">{props.name}</h3>
-                            <p className="flex-none">{props.description}</p>
+                            <p className="max-w-prose">{props.description}</p>
                         </div>
                     </div>
                     {(expanded && props.sections) &&
                         <div className="flex flex-col text-sm gap-1 pt-3 gap-4">
                             {props.sections.map((section: Section) => {
                                 return (
-                                    <div key={section.details} className="flex flex-row w-full">
+                                    <div key={section.details}
+                                         className={`flex ${section.image ? "flex-col" : "flex-row"} md:flex-row w-full`}>
                                         {section.link &&
                                             <button
-                                                className="h-6 w-6 mr-4 self-end self-center justify-self-center flex-none"
+                                                className="h-6 w-6 m-4 self-end self-center justify-self-center flex-none"
                                                 onClick={(e) => goTo(e, section.link)}>
                                                 <Github/>
                                             </button>}
                                         {section.image ?
-                                            <Image className="w-1/2 flex-none" src={section.image}
+                                            <Image className="w-full md:w-56 flex-none" src={section.image}
                                                    width={400} height={400} alt={"./"}/> : null}
                                         <div className="flex flex-col flex-grow p-2">
                                             {section.title ?
                                                 <>
                                                     <h4 className="flex-none">{section.title.toUpperCase()}</h4>
                                                     <p className="">{section.details}</p>
-                                                </> : <p className="p-8">{section.details}</p>}
+                                                </> : <p className="md:p-8">{section.details}</p>}
                                         </div>
                                     </div>
                                 )
