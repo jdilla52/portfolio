@@ -1,0 +1,37 @@
+{
+  "Not a fan": {
+    "Java": {
+      "feeling": "Memory is valuable"
+    },
+    "Php": {
+      "feeling": "Oh no"
+    },
+    "Ruby": {
+      "feeling": "Not a fan of the language"
+    },
+    "Angular": {
+      "feeling": "Use React"
+    },
+    "Vue": {
+      "feeling": "Use Svelte"
+    },
+    "Spring": {
+      "feeling": "I don't like the Java ecosystem"
+    },
+    "Django": {
+      "feeling": "Use Flask"
+    },
+    "Laravel": {
+      "feeling": ""
+    },
+    "Rails": {
+      "feeling": "Nah"
+    },
+    "Flask": {
+      "feeling": "Use FastAPI"
+    },
+    "Springboot": {
+      "feeling": "It's java"
+    }
+  }
+}

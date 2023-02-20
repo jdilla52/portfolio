@@ -1,0 +1,14 @@
+{
+    "name": "Portfolio",
+    "short_name": "Portfolio",
+    "icons": [
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ],
+    "theme_color": "#d6d3d1",
+    "background_color": "#d6d3d1",
+    "display": "standalone"
+}

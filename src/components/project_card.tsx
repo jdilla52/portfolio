@@ -21,7 +21,7 @@ const ProjectCard = ({props, expanded, setExpanded}: ProjectCardProps) => {
     // todo refactor for different card states: image, text, link, image + text + link
     // hacked in for now
     return (
-        <div className="w-full border-2 border-stone-800 font-cairo w-4/5"
+        <div className="w-full border-2 border-stone-800 font-cairo"
              onClick={() => setExpanded()} ref={ref}>
             <div className="flex flex-row justify-between content-between pl-6 p-4 gap-7">
                 <div className="grow flex flex-col">

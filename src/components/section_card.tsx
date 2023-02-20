@@ -10,7 +10,6 @@ type SectionCardProps = {
 const SectionCard = ({props}: SectionCardProps) => {
     const [expanded, setExpanded] = useState(false);
 
-    console.log(expanded);
     return (
         <div className="flex flex-col w-56">
             <div className="relative h-56">

@@ -1,0 +1,545 @@
+{
+  "skills": {
+    "Typescript": {},
+    "Javascript": {},
+    "React": {},
+    "Redux": {},
+    "Node": {},
+    "Express": {},
+    "MongoDB": {},
+    "SQL": {},
+    "HTML": {},
+    "CSS": {},
+    "GraphQL": {},
+    "Apollo": {},
+    "Git": {},
+    "Jest": {},
+    "Enzyme": {},
+    "Webpack": {},
+    "Babel": {},
+    "AWS": {},
+    "Docker": {},
+    "Kubernetes": {},
+    "Jenkins": {},
+    "Terraform": {},
+    "Ansible": {},
+    "RabbitMQ": {},
+    "Redis": {},
+    "ElasticSearch": {},
+    "Kafka": {},
+    "Rust": {},
+    "Python": {},
+    "C++": {},
+    "C": {},
+    "C#": {},
+    "Nginx": {},
+    "Spark": {},
+    "Neo4j": {},
+    "CockroachDB": {},
+    "PostgreSQL": {},
+    "NumPy": {},
+    "Pandas": {},
+    "Matplotlib": {},
+    "Plotly": {},
+    "Polars": {},
+    "Dask": {},
+    "Scikit-learn": {},
+    "NetworkX": {},
+    "Actix": {},
+    "Tokio": {},
+    "Hyper": {},
+    "Bevy": {},
+    "Ros": {},
+    "Gazebo": {},
+    "Unity": {},
+    "Glsl": {},
+    "DynamoDB": {},
+    "S3": {},
+    "Lambda": {},
+    "EC2": {},
+    "ECS": {},
+    "EKS": {},
+    "Rhino": {},
+    "Blender": {},
+    "RhinoCommon": {},
+    "Three.js": {},
+    "WebGL": {},
+    "Flutures": {},
+    "Aws Cdk": {},
+    "Aws Sdk": {},
+    "Aws Cli": {},
+    "Appsync": {},
+    "Amplify": {},
+    "Timestream": {},
+    "Influxdb": {},
+    "Grafana": {},
+    "Oathkeeper": {},
+    "Cognito": {},
+    "Sns": {},
+    "Sqs": {},
+    "Aws Iot": {},
+    "Aws Iot Core": {},
+    "Aws Iot Greengrass": {},
+    "Benthos": {},
+    "Kafka Connect": {},
+    "HiveMq": {},
+    "Mosquitto": {},
+    "SparkplugB": {},
+    "Tcp": {},
+    "Udp": {},
+    "Boost": {},
+    "Boost Asio": {},
+    "Eigen": {},
+    "OpenCV": {},
+    "Libigl": {},
+    "Parasolid": {},
+    "Solidworks": {},
+    "Hoops": {},
+    "Houdini": {},
+    "Zea": {},
+    "Zustand": {},
+    "React Query": {},
+    "React Router": {},
+    "React Spring": {},
+    "React Three Fiber": {},
+    "Black": {},
+    "Numpy": {},
+    "Openshift": {},
+    "Dask": {},
+    "Open Api": {},
+    "Grpc": {},
+    "Docker Compose": {},
+    "Argo": {},
+    "Kubectl": {},
+    "Kustomize": {},
+    "Fastapi": {},
+    "Websockets": {},
+    "Github Actions": {},
+    "Java": {},
+    "CloudCraft": {},
+    "3D printing": {},
+    "3D modeling": {},
+    "3D scanning": {},
+    "3D rendering": {},
+    "WebRtc": {},
+    "WebAssembly": {},
+    "Step Functions": {},
+    "Cmake": {},
+    "Tailwind": {},
+    "Clang": {},
+    "Krl": {},
+    "OpenVdb": {},
+    "Bitbucket Pipelines": {},
+    "Jupyter": {},
+    "Cython": {}
+  },
+  "Roles": {
+    "Bitski": {
+      "Floor Prices": {
+        "tech": [
+          "GraphQL",
+          "Apollo",
+          "Git",
+          "AWS",
+          "Docker",
+          "Kubernetes",
+          "Github Actions",
+          "Kafka",
+          "Rust",
+          "Actix",
+          "Argo",
+          "Kubectl",
+          "Kustomize",
+          "CockroachDb"
+        ]
+      },
+      "Floor Price Notifications": {
+        "tech": [
+          "Git",
+          "AWS",
+          "Docker",
+          "Kubernetes",
+          "Github Actions",
+          "Kafka",
+          "Rust",
+          "Benthos",
+          "Confluent",
+          "Reqwest",
+          "Argo",
+          "Kubectl",
+          "Kustomize",
+          "CockroachDb",
+          "Openshift",
+          "Grpc"
+        ]
+      },
+      "Activity Feed": {
+        "tech": [
+          "Git",
+          "AWS",
+          "Docker",
+          "Kubernetes",
+          "Github Actions",
+          "Kafka",
+          "Rust",
+          "Benthos",
+          "Confluent",
+          "Reqwest",
+          "Argo",
+          "Kubectl",
+          "Kustomize",
+          "CockroachDb",
+          "Openshift",
+          "Python",
+          "FastApi",
+          "Black",
+          "Spark",
+          "Java",
+          "Grpc"
+        ]
+      },
+      "Bids Offers": {
+        "tech": [
+          "Git",
+          "AWS",
+          "Docker",
+          "Kubernetes",
+          "Github Actions",
+          "Kafka",
+          "Rust",
+          "Benthos",
+          "Reqwest",
+          "Argo",
+          "Kubectl",
+          "Kustomize",
+          "CockroachDb",
+          "Openshift",
+          "Grpc",
+          "Websockets"
+        ]
+      },
+      "Metadata": {
+        "tech": [
+          "Git",
+          "AWS",
+          "Docker",
+          "Kubernetes",
+          "Github Actions",
+          "Kafka",
+          "Benthos",
+          "Confluent",
+          "Rust",
+          "Reqwest",
+          "Argo",
+          "Kubectl",
+          "Kustomize",
+          "CockroachDb",
+          "Openshift",
+          "Grpc"
+        ]
+      },
+      "Metafold": {
+        "Advisor": {
+          "tech": [
+            "3D Printing",
+            "WebRtc",
+            "WebAssembly",
+            "WebGl",
+            "Three.js"
+          ]
+        }
+      },
+      "Madeium": {
+        "Advisor": {
+          "tech": [
+            "3D Printing",
+            "C++",
+            "Aws Lambda",
+            "Aws Cdk",
+            "Docker",
+            "Eigen",
+            "Libigl"
+          ]
+        }
+      },
+      "Branch": {
+        "Internal Design Tool": {
+          "tech": [
+            "Kubernetes",
+            "Jest",
+            "React",
+            "Typescript",
+            "Docker",
+            "Git",
+            "Jest",
+            "Express",
+            "Flutures",
+            "Ec2",
+            "S3",
+            "Aws Sdk",
+            "Html",
+            
+          ]
+        },
+        "Design Engine": {
+          "tech": [
+            "Html",
+            "Tailwind",
+            "3D Printing",
+            "C++",
+            "Aws Lambda",
+            "Aws Cdk",
+            "Docker",
+            "Parasolid",
+            "Appsync",
+            "Aws Sdk",
+            "Hoops",
+            "WebGl",
+            "Three.js",
+            "WebAssembly",
+            "Github Actions",
+            "Sns",
+            "Cognito",
+            "Step Functions",
+            "Zea",
+            "Zustand",
+            "React"
+          ]
+        },
+        "Ros": {
+          "tech": [
+            "3D Printing",
+            "Tailwind",
+            "C++",
+            "Python",
+            "Cmake",
+            "Docker",
+            "WebGl",
+            "Three.js",
+            "WebAssembly",
+            "Kubernetes",
+            "Github Actions",
+            "Udp",
+            "Tcp",
+            "React",
+            "Html",
+            "React Three Fiber",
+            "Black",
+            "Clang"
+          ]
+        },
+        "IIOT": {
+          "tech": [
+            "3D Printing",
+            "Grafana",
+            "Timestream",
+            "Influxdb",
+            "Rabbitmq",
+            "HiveMq",
+            "Mosquitto",
+            "Python",
+            "Cmake",
+            "Docker",
+            "Krl",
+            "Rust",
+            "Tokio",
+            "Aws Sdk",
+            "Eks",
+            "Kubernetes",
+            "Github Actions",
+            "Udp",
+            "Tcp",
+            "Black",
+            "Clang"
+          ]
+        }
+      },
+      "Adidas": {
+        "4d V2": {
+          "tech": [
+            "3D Printing",
+            "Tailwind",
+            "C++",
+            "Aws Lambda",
+            "Aws Cdk",
+            "Docker",
+            "Aws Sdk",
+            "WebGl",
+            "Three.js",
+            "WebAssembly",
+            "Kubernetes",
+            "NumPy",
+            "Scipy",
+            "Pandas",
+            "Matplotlib"
+          ]
+        }
+      }
+    },
+    "4d Cush": {
+      "tech": [
+        "Rhino",
+        "Grasshopper",
+        "Python",
+        "Numpy",
+        "Scipy",
+        "Pandas",
+        "Matplotlib",
+        "Houdini",
+        "OpenVdb"
+      ]
+    },
+    "4d Kick": {
+      "tech": [
+        "Rhino",
+        "Grasshopper",
+        "Python",
+        "Numpy",
+        "Scipy",
+        "Pandas",
+        "Matplotlib",
+        "Houdini",
+        "OpenVdb"
+      ]
+    },
+    "4d Creator": {
+      "tech": [
+        "React",
+        "Tailwind",
+        "Three.js",
+        "WebGl",
+        "WebAssembly",
+        "Websockets",
+        "Python",
+        "Numpy",
+        "Scipy",
+        "C++",
+        "Cmake",
+        "Docker",
+        "Kubernetes",
+        "Bitbucket Pipelines",
+        "Jenkins",
+        "Eks",
+        "Kubernetes",
+        "Aws Sdk",
+        "S3",
+        "MongoDb",
+        "Clang",
+        "Eigen",
+        "Blender",
+        "Houdini",
+        "OpenVdb",
+        "Express"
+      ]
+    },
+    "Engineering Platform": {
+      "tech": [
+        "Python",
+        "MongoDb",
+        "C++",
+        "Cmake",
+        "Docker",
+        "Kubernetes",
+        "Bitbucket Pipelines",
+        "Jenkins",
+        "Eks",
+        "Kubernetes",
+        "Aws Sdk",
+        "Eigen",
+        "Scipy",
+        "Pandas",
+        "Matplotlib",
+        "Numpy",
+        "Plotly",
+        "Jupyter",
+        "Cython",
+        "Black",
+        "MongoDb"
+      ]
+    },
+    "4d V1": {
+      "tech": [
+        "Python",
+        "Numpy",
+        "Scipy",
+        "Pandas",
+        "Matplotlib",
+        "C++",
+        "Cmake",
+        "Docker",
+        "FastApi",
+        "Black",
+        "Grasshopper",
+        "Rhino"
+      ]
+    },
+    "4d Creator Mvp": {
+      "tech": [
+        "Python",
+        "Numpy",
+        "Scipy",
+        "Pandas",
+        "Matplotlib",
+        "C#",
+        "Cmake"
+      ]
+    },
+    "Strung": {
+      "tech": [
+        "Typescript",
+        "Tailwind",
+        "React",
+        "Three.js",
+        "WebGl"
+      ]
+    },
+    "4d": {
+      "tech": [
+        "C#",
+        "Grasshopper",
+        "Rhino",
+        "Python",
+        "Processing",
+        "Numpy",
+        "Scipy",
+        "Pandas",
+        "Matplotlib"
+      ]
+    },
+    "Forged": {
+      "tech": [
+        "Grassopper",
+        "Rhino",
+        "Python"
+      ]
+    },
+    "Reaction Diffusion Outsole": {
+      "tech": [
+        "Grasshopper",
+        "Rhino",
+        "Processing"
+      ]
+    },
+    "Blade": {
+      "tech": [
+        "Grasshopper",
+        "Rhino"
+      ]
+    },
+    "Khora Image": {
+      "tech": [
+        "Grasshopper",
+        "Rhino",
+        "Three.js",
+        "WebGl",
+        "Html",
+        "Css"
+      ]
+    }
+  }
+}
+
+
+
+
+

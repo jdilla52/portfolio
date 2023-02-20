@@ -42,8 +42,8 @@ const Projects = () => {
     }
     return (
         <div className="relative fixed w-screen h-screen flex flex-row bg-stone-100">
-            <div className="overflow-auto w-screen" ref={outerRef}>
-                <div className="grow w-[calc(100%-theme(space.36))] flex flex-col items-center p-6 pl-16
+            <div className="overflow-auto w-screen item-center" ref={outerRef}>
+                <div className="grow flex flex-col max-w-3xl ml-16 justify-self-center
             text-stone-800 overflow-auto scrollbar gap-4">
                     {projectData.projects.map((project: Project) => {
                         return (

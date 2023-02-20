@@ -85,11 +85,12 @@
       ],
       "role": "Senior Software Engineer",
       "image": "/branch.svg",
-      "headline": "Owned cloud adoption while leading a small team focused on 3d printing in construction. A wide range of responsibility from client facing frontend to iiot data aggregation and robotics.",
+      "headline": "Owned cloud adoption while leading a small team focused on 3d printing in construction. A wide range of responsibility, from client facing frontends to iiot and robotics.",
       "link": "https://branchtechnology.com/",
       "projects": [
         {
           "name": "Design Engine",
+          "timeframe": 9,
           "description": "A tool for architects to design and evaluate 3d printed facades.",
           "details": [
             "Abstracted a licensed Wasm based 3d scene (Hoops) to create an interactive 3d tool using React.",
@@ -100,6 +101,7 @@
         },
         {
           "name": "Ros",
+          "timeframe": 4,
           "description": "Developed 2 mvp applications for controlling robotic motion.",
           "details": [
             "Used React + three.js. to deliver a realtime web client for the evaluation robotic motion.",
@@ -109,6 +111,7 @@
         },
         {
           "name": "IIOT",
+          "timeframe": 6,
           "description": "Implemented a popular industry design as an end to end solution for data collection, aggregation and insight creation.",
           "details": [
             "Designed and collaborated on a highly available architecture based on UNS (unified namespace).",
@@ -223,7 +226,6 @@
           "name": "4d",
           "description": "Delivered a prototype 3d printed product.",
           "details": [
-            "Developed a python library for 3d operations.",
             "Developed a C# library and application for 3d operations.",
             "Developed a hex meshing approach for 3d printing."
           ],
