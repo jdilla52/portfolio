@@ -21,7 +21,7 @@ const ProjectCard = ({props, expanded, setExpanded}: ProjectCardProps) => {
     // todo refactor for different card states: image, text, link, image + text + link
     // hacked in for now
     return (
-        <div className="w-full border-2 border-stone-800 font-cairo"
+        <div className="relative w-full border-2 border-stone-800 font-cairo"
              onClick={() => setExpanded()} ref={ref}>
             <div className="flex flex-col pl-6 p-4">
                     <div className="grow flex flex-row w-full justify-between items-center gap-3">
@@ -30,13 +30,8 @@ const ProjectCard = ({props, expanded, setExpanded}: ProjectCardProps) => {
                                    height={100} width={100} alt={"./"}/></div>}
                         <div className="grow w-full">
                             <h3 className="text-lg">{props.name}</h3>
-                            <p className="max-w-prose">{props.description}</p>
+                            <p className="w-full flex-none">{props.description}</p>
                         </div>
-                    {props.link &&
-                        <button className="flex-none h-7 self-start"
-                                onClick={(e) => goTo(e, props.link)}>
-                            <Github/>
-                        </button>}
                 </div>
                 {(expanded && props.sections) &&
                     <div className="flex flex-col text-sm gap-1 pt-3 gap-4">
@@ -64,11 +59,16 @@ const ProjectCard = ({props, expanded, setExpanded}: ProjectCardProps) => {
                             )
                         })}
                     </div>}
-                {props.sections &&
-                    <div className="shrink flex-none self-end justify-self-end h-2.5 mt-2">
-                        <Arrow t={expanded ? 1.0 : 0.0}/>
-                    </div>}
             </div>
+            {props.link &&
+                <button className="absolute right-3 top-4 h-7 w-7"
+                        onClick={(e) => goTo(e, props.link)}>
+                    <Github/>
+                </button>}
+            {props.sections &&
+                <div className="absolute right-3 bottom-2 h-7 w-7">
+                    <Arrow t={expanded ? 1.0 : 0.0}/>
+                </div>}
         </div>
 
     )

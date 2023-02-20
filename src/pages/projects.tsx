@@ -41,15 +41,15 @@ const Projects = () => {
         setExpanded({...init_state, [name]: !expanded[name]})
     }
     return (
-        <div className="relative fixed w-screen h-screen flex flex-row bg-stone-100">
-            <div className="grow flex flex-col overflow-auto w-screen item-center mb-16 text-stone-800 md:mb-0 gap-4" ref={outerRef}>
-                    {projectData.projects.map((project: Project) => {
-                        return (
-                            <ProjectCard key={project.name} props={project} expanded={expanded[project.name]}
-                                         setExpanded={setExpandedState(project.name)}/>
-                        )
-                    })
-                    }
+        <div className="relative fixed w-screen h-screen flex md:flex-row sm:flex-col bg-stone-100">
+            <div className="overflow-y-auto w-screen pb-16" ref={outerRef}>
+                <div className="grow sm:w-full md:w-[calc(100%-theme(space.36))] md:pl-36 flex flex-col w-md p-4
+            text-stone-800 gap-4">
+                    {projectData.projects.map((project: Project) =>
+                        <ProjectCard key={project.name} props={project} expanded={expanded[project.name]}
+                                     setExpanded={setExpandedState(project.name)}/>
+                    )}
+                </div>
             </div>
             <div
                 className="fixed flex md:flex-col bottom-0 left-0 right-0 md:right-0 md:left-[calc(100%-theme(space.36))] md:top-0 items-end md:items-center justify-between">

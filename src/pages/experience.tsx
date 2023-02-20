@@ -47,15 +47,13 @@ const Experience = () => {
     }
     return (
         <div className="relative fixed w-screen h-screen flex md:flex-row sm:flex-col bg-stone-100">
-            <div className="overflow-y-auto w-screen pb-16 md:mb-0" ref={outerRef}>
+            <div className="overflow-y-auto w-screen pb-16" ref={outerRef}>
                 <div className="grow sm:w-full md:w-[calc(100%-theme(space.36))] flex flex-col items-center p-4
             text-stone-800">
-                    {experienceData.roles.map((role: Role) => {
-                        return (
-                            <ExperienceCard key={role.headline} props={role} expanded={expanded[getRoleKey(role)]}
-                                            setExpanded={setExpandedState(getRoleKey(role))}/>
-                        )
-                    })}
+                    {experienceData.roles.map((role: Role) =>
+                        <ExperienceCard key={role.headline} props={role} expanded={expanded[getRoleKey(role)]}
+                                        setExpanded={setExpandedState(getRoleKey(role))}/>
+                    )}
                 </div>
                 <div
                     className="fixed flex md:flex-col bottom-0 left-0 right-0 md:right-0 md:left-[calc(100%-theme(space.36))] md:top-0 items-end md:items-center justify-between">
