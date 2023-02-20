@@ -253,7 +253,7 @@
       "headline": "Extended from initial 3 contract to 1 year. Moved some of their development process to 3D and to explore generative tools.",
       "projects": [
         {
-          "name": "Reaction Diffusion Outsole",
+          "name": "RD Outsole",
           "description": "Developed an interface for designers to explore reaction diffusion.",
           "details": [
             "Developed reaction-diffusion based outsole tool in Process.js.",
@@ -275,7 +275,7 @@
       "link": "https://altair.com/",
       "projects": [
         {
-          "name": "Blade",
+          "name": "Running Blade",
           "description": "Developed a blade for a paralympian.",
           "details": [
             "Developed a blade for a paralympian.",

@@ -24,11 +24,11 @@ const SectionCard = ({props}: SectionCardProps) => {
                         </ol>
                     </div>}
             </div>
-            <div className="justify-self-end pt-2 w-full h-10 flex flex-row items-center justify-between">
-                {props.image && <button className="h-6 w-6 flex-none ml-2"
+            <div className="justify-self-end pt-3 w-full h-10 flex flex-row items-center justify-between">
+                {props.image ? <button className="h-6 w-6 flex-none ml-2"
                                         onClick={(e) => onClick(e, () => setExpanded(!expanded))}>
                     <Info/>
-                </button>}
+                </button>: <div/>}
                 <button className="" onClick={(e) => goTo(e, props.link)}>{props.name}</button>
                 <div className="w-6 h-6 mr-2 flex-none">
                 </div>

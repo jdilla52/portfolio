@@ -32,17 +32,16 @@ const ExperienceCard = ({props, expanded, setExpanded}: ExperienceCardProps) => 
                 className={`flex flex-row grow justify-between border-2 border-stone-800 ${expanded ? "w-full" : "md:w-96"} p-4 md:ml-16 my-4`}
                 onClick={() => props.projects ? setExpanded() : () => null}>
 
-                <div className="shrink flex flex-col items-center justify-center">
+                <div className="flex flex-col items-center justify-center">
                     <button className="flex flex-row items-center w-full gap-3 pb-1 hover:underline"
                             onClick={(e) => goTo(e, props.link)}>
-                        {props.image ?
-                            <div className="h-8 w-8"><Image height={90} width={90} src={props.image} alt={"./"}/>
-                            </div> : null}
+                        {props.image &&
+                            <div className="h-8 w-8 flex-non"><Image height={90} width={90} src={props.image}
+                                                                     alt={"./"}/>
+                            </div>}
                         <p className="text-lg">{props.company}: {props.role}</p>
                     </button>
-                    <div className="shrink">
-                        <p className="max-w-prose">{props.headline}</p>
-                    </div>
+                    <p className="max-w-prose">{props.headline}</p>
                     {expanded && props.projects ? <div className="grid sm:grid-cols-1 md:grid-cols-2 text-sm gap-6 p-4">
                         {props.projects.map((project: Project) => {
                             return (

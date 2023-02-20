@@ -30,7 +30,7 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 
 todo:
 2/19
-- [ ] add project assets
+- [X] add project assets
   - [X] Create visuals
   - [X] Capture new screenshot of bevy chess
   - [X] Create visual for web3 graph
@@ -55,9 +55,9 @@ todo:
 
 2/20
 - [ ] add div animation and effects
-- [ ] redesign projects page
+- [X] redesign projects page
 - [ ] cleanup repo
-- [ ] add mobile styling and redesign where needed
+- [X] add mobile styling and redesign where needed
 
 Other:
 - [ ] move assets to backend
