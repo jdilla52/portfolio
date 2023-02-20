@@ -66,7 +66,7 @@ const ProjectCard = ({props, expanded, setExpanded}: ProjectCardProps) => {
                     <Github/>
                 </button>}
             {props.sections &&
-                <div className="absolute right-3 bottom-2 h-7 w-7">
+                <div className="absolute right-3 bottom-2 h-6 w-6">
                     <Arrow t={expanded ? 1.0 : 0.0}/>
                 </div>}
         </div>

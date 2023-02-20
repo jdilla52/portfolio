@@ -56,7 +56,7 @@ const Experience = () => {
                     )}
                 </div>
                 <div
-                    className="fixed flex md:flex-col bottom-0 left-0 right-0 md:right-0 md:left-[calc(100%-theme(space.36))] md:top-0 items-end md:items-center justify-between">
+                    className="fixed flex md:flex-col bottom-0 left-0 right-0 md:right-0 md:left-[calc(100%-theme(space.36))] md:top-0 items-end md:items-center justify-between bg-stone-100">
                     <div className="w-10 md:w-24 h-10 md:h-24 m-4 md:mr-12">
                         <Link href="/">
                             <Logo/>
