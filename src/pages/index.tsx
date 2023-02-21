@@ -4,6 +4,7 @@ import React from "react";
 import Linkedin from "../assets/linkedin";
 import Github from "../assets/github";
 import SpecialBullet from "../assets/special_bullet";
+import Resume from "../assets/resume";
 
 const Home: NextPage = () => {
     return (
@@ -12,11 +13,14 @@ const Home: NextPage = () => {
             <div className="w-36">
                 <Logo/>
             </div>
-            <div className="flex w-36 justify-between">
-                <a className="h-10 grow" href="https://github.com/jdilla52">
+            <div className="flex w-40 justify-between">
+                <a className="h-10" href="https://github.com/jdilla52">
                     <Github/>
                 </a>
-                <a className="h-10 grow" href="https://linkedin.com/in/jacques-perrault">
+                <a className="w-10 h-10" href="/resume_2023_2.pdf" download="/resume_2023_2.pdf">
+                    <Resume/>
+                </a>
+                <a className="h-10" href="https://linkedin.com/in/jacques-perrault">
                     <Linkedin/>
                 </a>
             </div>
